@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "steam-potential-271511",
+  "private_key_id": "fe82958adfc6f8739eaca13365217047f28d67e8",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDPZGAhNUsyE/Np\napxE8v9aNF3GQ/DEXzehqbiovwUt5Q1vm5e3tYB/rvqQN5XGngg1qaUqOmqKALci\nWJBC9oQiPWnFAfBNS1tCNeJS1a06xSt+hRAR4kODrpNJ+z0YVfTdFMZYtDAzlqU7\nunQS9LP4LE4Fx1aHEGHlIVBXDHSXNmhCvRxZDaRh/P6A6FlWY61d1GkNwJyaMV5o\nRBTHnh6vkuJ6XSggroU9wqKQbcSFhf3uXNsE2w/CJpNPr8L6FrnsiEuaf6rKH9zy\n4rVFY5xTuVsO4R5P0oTouqsaoUzRPcJDyu/9yI5gxtam9vYciODJhDUkWn9Om+gB\n6x0y0/xjAgMBAAECggEAHuUiGPBaglxMf6C9JNxaQ/LXIWkPngFdRT0GYEUMnXio\n1r6EDH8CZIMJmqBdNJhoOq5KB49qPaK7pWcyHneg2YTyk8GlLa6TKrriO1rPkpi6\n0P87lJ5zVlOUZ4oA4PY1IxYsMhytrZG8jbhKAGTpxoe7G8tFTZuYKc0brcwSNlBE\nm5oPzV0QtR9w4B+9tvohMLIkxZ86fO+rT5t+bgRLK80/RQUlOpUoQGikNfiumXzg\n2FZwFs19NlrSB3TOcf0qk0tQQK5pw9iEOXcjKga/80FUglggs6nnw2vz0tq9eyGX\nxMDftDNLH4ZhklFmoL4JaQkCFYeZwwwyFcPCbTpE0QKBgQD+l0PWUCtLN5i0cXKi\nq20Eh2s8BNEnsU14CUUjPAsNgaqAdAqSEm0XfHKJXKSP3yo/TVryFZTLmh3BQhvN\n043EIxHTUXmlFmsyuTP9PnCJR4RF4Bxk3zWSBRq4vBhEyoYNnI/3pNcoefv1a+AY\nD/kGr8qITLhkw5gmiATWONt+WQKBgQDQijvMxowhXIX1KrAPfL066/t6tX+r+G94\nXWbHjSD5ACqkg+mWxVLYGC/1/z2xTVmqF4VfgHKNylFxoSgVzTVuFDJieBmLqRrZ\nHBhf8ewS6pw+fXE77FzGEXDs3iqgFnmJiT4NYAXXoPOZZFYdbCyS1CYZBJXFnvhl\n/ZZ0Qt/RGwKBgE5xiyxgnUZaxglrHzgx+7A2jXr7vPou7kC7Enttx7YMqt1TY+Jo\nHQbsiFn8mpPd3iWNDyWiMqudO+fNF8YOlhLF/3sOEp4kTzlcyUERWRljWMUy7WzD\nPb1VJ0ueYRfpEu7ku5NBTi4hj9mpuG2RllhSF+RxRyt8/Md6h4r+D9tZAoGAIYqq\nVaR1s4P7M9S63rLUiN6d4z3AHDvoSfbT6jLD4+jn8vAYqRxx17oENM/p71OeoWIJ\nHLQ/OJkbAmjGVsNb3am39OiWS0VWwSbosL3rl5tOqCprBRVeUqlJfX+6YWdcAwgl\nB+ey6NzFcZ2W0EKu5Krkuc9n+5I3J8hi465B65MCgYBW8Kelcpi8ItrgtGRpv9a2\nIhxQsc74LtIKV/GuCAfRPL2/qX/X3wsGakq2XF5UGLod3WPvGySllxtdWcAWV28y\nk2vP9dOIjDIGdwN8g+MCNwJM/7S/+YVOncwEol13FGOn7LJWLYdi8Giy6NUJa4EV\nhxPgbUKQIit9F8iOXzywMQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "test-728@steam-potential-271511.iam.gserviceaccount.com",
+  "client_id": "108071073224751610889",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/test-728%40steam-potential-271511.iam.gserviceaccount.com"
+}

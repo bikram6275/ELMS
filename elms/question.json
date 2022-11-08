@@ -1,0 +1,2206 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "qsn_number": "1.1",
+            "qsn_name": "Name of Executive Officer",
+            "ans_type": "input",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": null,
+            "answer": [
+                {
+                    "id": 1,
+                    "enumerator_assign_id": 1,
+                    "qsn_id": 1,
+                    "answer": "DAS1",
+                    "qsn_opt_id": null,
+                    "other_answer": null,
+                    "other_values": null,
+                    "created_at": "2021-11-01T11:30:16.000000Z",
+                    "updated_at": "2021-11-15T05:42:24.000000Z"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "qsn_number": "1.2",
+            "qsn_name": "Name of HR officer (If applicable):",
+            "ans_type": "input",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": null,
+            "answer": [
+                {
+                    "id": 2,
+                    "enumerator_assign_id": 1,
+                    "qsn_id": 2,
+                    "answer": "sdsa1",
+                    "qsn_opt_id": null,
+                    "other_answer": null,
+                    "other_values": null,
+                    "created_at": "2021-11-01T11:30:23.000000Z",
+                    "updated_at": "2021-11-15T05:42:28.000000Z"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "qsn_number": "1.3",
+            "qsn_name": "Registered with",
+            "ans_type": "checkbox",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": null,
+            "question_options": [
+                {
+                    "id": 1,
+                    "qsn_id": 3,
+                    "option_number": "a",
+                    "option_name": "Office of Company Register",
+                    "option_order": 1,
+                    "option_type": "checkbox",
+                    "options": null
+                },
+                {
+                    "id": 2,
+                    "qsn_id": 3,
+                    "option_number": "b",
+                    "option_name": "Cottage and Small Industry Office",
+                    "option_order": 2,
+                    "option_type": "checkbox",
+                    "options": null
+                },
+                {
+                    "id": 3,
+                    "qsn_id": 3,
+                    "option_number": "c",
+                    "option_name": "Department of Industry",
+                    "option_order": 3,
+                    "option_type": "checkbox",
+                    "options": null
+                },
+                {
+                    "id": 4,
+                    "qsn_id": 3,
+                    "option_number": "d",
+                    "option_name": "Local Government (Municipality/R. Municipality)",
+                    "option_order": 4,
+                    "option_type": "checkbox",
+                    "options": null
+                },
+                {
+                    "id": 5,
+                    "qsn_id": 3,
+                    "option_number": "e",
+                    "option_name": "District Coordination Committee",
+                    "option_order": 5,
+                    "option_type": "checkbox",
+                    "options": null
+                },
+                {
+                    "id": 6,
+                    "qsn_id": 3,
+                    "option_number": "f",
+                    "option_name": "Others",
+                    "option_order": 6,
+                    "option_type": "others",
+                    "options": null
+                }
+            ],
+            "answer": [
+                {
+                    "id": 38,
+                    "enumerator_assign_id": 1,
+                    "qsn_id": 3,
+                    "answer": "5,6",
+                    "qsn_opt_id": null,
+                    "other_answer": "ere",
+                    "other_values": null,
+                    "created_at": "2021-11-14T09:28:11.000000Z",
+                    "updated_at": "2021-11-15T05:42:32.000000Z"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "qsn_number": "1.4",
+            "qsn_name": "Types of Enterprises",
+            "ans_type": "radio",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": null,
+            "question_options": [
+                {
+                    "id": 7,
+                    "qsn_id": 4,
+                    "option_number": "a",
+                    "option_name": "Individual Proprietor",
+                    "option_order": 1,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 8,
+                    "qsn_id": 4,
+                    "option_number": "b",
+                    "option_name": "Partnership",
+                    "option_order": 2,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 9,
+                    "qsn_id": 4,
+                    "option_number": "c",
+                    "option_name": "Public Limited Company",
+                    "option_order": 3,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 10,
+                    "qsn_id": 4,
+                    "option_number": "d",
+                    "option_name": "State owned enterprises",
+                    "option_order": 4,
+                    "option_type": "radio",
+                    "options": null
+                }
+            ],
+            "answer": [
+                {
+                    "id": 4,
+                    "enumerator_assign_id": 1,
+                    "qsn_id": 4,
+                    "answer": null,
+                    "qsn_opt_id": 8,
+                    "other_answer": null,
+                    "other_values": null,
+                    "created_at": "2021-11-01T11:30:36.000000Z",
+                    "updated_at": "2021-11-15T05:42:37.000000Z"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "qsn_number": "1.5",
+            "qsn_name": "Number of partners/ Shareholders",
+            "ans_type": "input",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": null,
+            "answer": [
+                {
+                    "id": 5,
+                    "enumerator_assign_id": 1,
+                    "qsn_id": 5,
+                    "answer": "Number of partners11",
+                    "qsn_opt_id": null,
+                    "other_answer": null,
+                    "other_values": null,
+                    "created_at": "2021-11-01T11:30:45.000000Z",
+                    "updated_at": "2021-11-15T05:42:40.000000Z"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "qsn_number": "1.6",
+            "qsn_name": "Scale of enterprise other than FCAN member organisations:",
+            "ans_type": "radio",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": null,
+            "question_options": [
+                {
+                    "id": 11,
+                    "qsn_id": 6,
+                    "option_number": "a",
+                    "option_name": "Micro/Cottage",
+                    "option_order": 1,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 12,
+                    "qsn_id": 6,
+                    "option_number": "b",
+                    "option_name": "Small",
+                    "option_order": 2,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 13,
+                    "qsn_id": 6,
+                    "option_number": "c",
+                    "option_name": "Medium",
+                    "option_order": 3,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 14,
+                    "qsn_id": 6,
+                    "option_number": "d",
+                    "option_name": "Large",
+                    "option_order": 4,
+                    "option_type": "radio",
+                    "options": null
+                }
+            ],
+            "answer": [
+                {
+                    "id": 6,
+                    "enumerator_assign_id": 1,
+                    "qsn_id": 6,
+                    "answer": null,
+                    "qsn_opt_id": 13,
+                    "other_answer": null,
+                    "other_values": null,
+                    "created_at": "2021-11-01T11:30:49.000000Z",
+                    "updated_at": "2021-11-15T05:42:44.000000Z"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "qsn_number": "1.7",
+            "qsn_name": "Applies only for FCAN member organisations",
+            "ans_type": "radio",
+            "qsn_status": "active",
+            "required": "no",
+            "instruction": null,
+            "question_options": [
+                {
+                    "id": 15,
+                    "qsn_id": 7,
+                    "option_number": "1",
+                    "option_name": "A",
+                    "option_order": 1,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 16,
+                    "qsn_id": 7,
+                    "option_number": "2",
+                    "option_name": "B",
+                    "option_order": 2,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 17,
+                    "qsn_id": 7,
+                    "option_number": "3",
+                    "option_name": "C",
+                    "option_order": 3,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 18,
+                    "qsn_id": 7,
+                    "option_number": "4",
+                    "option_name": "D",
+                    "option_order": 4,
+                    "option_type": "radio",
+                    "options": null
+                }
+            ],
+            "answer": [
+                {
+                    "id": 7,
+                    "enumerator_assign_id": 1,
+                    "qsn_id": 7,
+                    "answer": null,
+                    "qsn_opt_id": 15,
+                    "other_answer": null,
+                    "other_values": null,
+                    "created_at": "2021-11-01T11:30:52.000000Z",
+                    "updated_at": "2021-11-15T05:42:48.000000Z"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "qsn_number": "2",
+            "qsn_name": "Membership with Associated Federation",
+            "ans_type": "sub_qsn",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": null,
+            "sub_questions": [
+                {
+                    "id": 9,
+                    "parent_id": 8,
+                    "qsn_number": "2.1",
+                    "qsn_name": "FNCCI",
+                    "ans_type": "multiple_input",
+                    "qst_status": "active",
+                    "required": "yes",
+                    "instruction": null,
+                    "qsn_modify": "yes",
+                    "qsn_order": 9,
+                    "created_at": "2021-10-26T09:05:37.000000Z",
+                    "updated_at": "2021-10-26T09:05:37.000000Z",
+                    "answer": [
+                        {
+                            "id": 8,
+                            "enumerator_assign_id": 1,
+                            "qsn_id": 9,
+                            "answer": {
+                                "19": "2021",
+                                "20": "Jan"
+                            },
+                            "qsn_opt_id": null,
+                            "other_answer": null,
+                            "other_values": null,
+                            "created_at": "2021-11-01T11:31:04.000000Z",
+                            "updated_at": "2021-11-01T11:31:04.000000Z"
+                        }
+                    ],
+                    "question_option": [
+                        {
+                            "id": 19,
+                            "parent_id": 0,
+                            "qsn_id": 9,
+                            "option_number": "1",
+                            "option_name": "Year",
+                            "option_order": 1,
+                            "option_type": "input",
+                            "options": null,
+                            "remarks": null,
+                            "created_at": "2021-10-26T09:05:38.000000Z",
+                            "updated_at": "2021-10-26T09:05:38.000000Z"
+                        },
+                        {
+                            "id": 20,
+                            "parent_id": 0,
+                            "qsn_id": 9,
+                            "option_number": "2",
+                            "option_name": "Month",
+                            "option_order": 2,
+                            "option_type": "input",
+                            "options": null,
+                            "remarks": null,
+                            "created_at": "2021-10-26T09:05:38.000000Z",
+                            "updated_at": "2021-10-26T09:05:38.000000Z"
+                        }
+                    ]
+                },
+                {
+                    "id": 10,
+                    "parent_id": 8,
+                    "qsn_number": "2.2",
+                    "qsn_name": "FNCSI",
+                    "ans_type": "multiple_input",
+                    "qst_status": "active",
+                    "required": "yes",
+                    "instruction": null,
+                    "qsn_modify": "yes",
+                    "qsn_order": 10,
+                    "created_at": "2021-10-26T09:06:15.000000Z",
+                    "updated_at": "2021-10-26T09:06:15.000000Z",
+                    "answer": [
+                        {
+                            "id": 9,
+                            "enumerator_assign_id": 1,
+                            "qsn_id": 10,
+                            "answer": {
+                                "21": "2021",
+                                "22": "Feb"
+                            },
+                            "qsn_opt_id": null,
+                            "other_answer": null,
+                            "other_values": null,
+                            "created_at": "2021-11-01T11:31:05.000000Z",
+                            "updated_at": "2021-11-01T11:31:05.000000Z"
+                        }
+                    ],
+                    "question_option": [
+                        {
+                            "id": 21,
+                            "parent_id": 0,
+                            "qsn_id": 10,
+                            "option_number": "1",
+                            "option_name": "Year",
+                            "option_order": 1,
+                            "option_type": "input",
+                            "options": null,
+                            "remarks": null,
+                            "created_at": "2021-10-26T09:06:15.000000Z",
+                            "updated_at": "2021-10-26T09:06:15.000000Z"
+                        },
+                        {
+                            "id": 22,
+                            "parent_id": 0,
+                            "qsn_id": 10,
+                            "option_number": "2",
+                            "option_name": "Month",
+                            "option_order": 2,
+                            "option_type": "input",
+                            "options": null,
+                            "remarks": null,
+                            "created_at": "2021-10-26T09:06:15.000000Z",
+                            "updated_at": "2021-10-26T09:06:15.000000Z"
+                        }
+                    ]
+                },
+                {
+                    "id": 11,
+                    "parent_id": 8,
+                    "qsn_number": "2.3",
+                    "qsn_name": "CNI",
+                    "ans_type": "multiple_input",
+                    "qst_status": "active",
+                    "required": "yes",
+                    "instruction": null,
+                    "qsn_modify": "yes",
+                    "qsn_order": 11,
+                    "created_at": "2021-10-26T09:07:12.000000Z",
+                    "updated_at": "2021-10-26T09:07:12.000000Z",
+                    "answer": [
+                        {
+                            "id": 10,
+                            "enumerator_assign_id": 1,
+                            "qsn_id": 11,
+                            "answer": {
+                                "23": "2022",
+                                "24": "feb"
+                            },
+                            "qsn_opt_id": null,
+                            "other_answer": null,
+                            "other_values": null,
+                            "created_at": "2021-11-01T11:31:05.000000Z",
+                            "updated_at": "2021-11-15T05:42:57.000000Z"
+                        }
+                    ],
+                    "question_option": [
+                        {
+                            "id": 23,
+                            "parent_id": 0,
+                            "qsn_id": 11,
+                            "option_number": "1",
+                            "option_name": "Year",
+                            "option_order": 1,
+                            "option_type": "input",
+                            "options": null,
+                            "remarks": null,
+                            "created_at": "2021-10-26T09:07:12.000000Z",
+                            "updated_at": "2021-10-26T09:07:12.000000Z"
+                        },
+                        {
+                            "id": 24,
+                            "parent_id": 0,
+                            "qsn_id": 11,
+                            "option_number": "2",
+                            "option_name": "Month",
+                            "option_order": 2,
+                            "option_type": "input",
+                            "options": null,
+                            "remarks": null,
+                            "created_at": "2021-10-26T09:07:12.000000Z",
+                            "updated_at": "2021-10-26T09:07:12.000000Z"
+                        }
+                    ]
+                },
+                {
+                    "id": 12,
+                    "parent_id": 8,
+                    "qsn_number": "2.4",
+                    "qsn_name": "FCAN",
+                    "ans_type": "multiple_input",
+                    "qst_status": "active",
+                    "required": "yes",
+                    "instruction": null,
+                    "qsn_modify": "yes",
+                    "qsn_order": 12,
+                    "created_at": "2021-10-26T09:07:49.000000Z",
+                    "updated_at": "2021-10-26T09:07:49.000000Z",
+                    "answer": [
+                        {
+                            "id": 11,
+                            "enumerator_assign_id": 1,
+                            "qsn_id": 12,
+                            "answer": {
+                                "25": null,
+                                "26": null
+                            },
+                            "qsn_opt_id": null,
+                            "other_answer": null,
+                            "other_values": null,
+                            "created_at": "2021-11-01T11:31:05.000000Z",
+                            "updated_at": "2021-11-01T11:31:05.000000Z"
+                        }
+                    ],
+                    "question_option": [
+                        {
+                            "id": 25,
+                            "parent_id": 0,
+                            "qsn_id": 12,
+                            "option_number": "1",
+                            "option_name": "Year",
+                            "option_order": 1,
+                            "option_type": "input",
+                            "options": null,
+                            "remarks": null,
+                            "created_at": "2021-10-26T09:07:49.000000Z",
+                            "updated_at": "2021-10-26T09:07:49.000000Z"
+                        },
+                        {
+                            "id": 26,
+                            "parent_id": 0,
+                            "qsn_id": 12,
+                            "option_number": "2",
+                            "option_name": "Month",
+                            "option_order": 2,
+                            "option_type": "input",
+                            "options": null,
+                            "remarks": null,
+                            "created_at": "2021-10-26T09:07:49.000000Z",
+                            "updated_at": "2021-10-26T09:07:49.000000Z"
+                        }
+                    ]
+                },
+                {
+                    "id": 13,
+                    "parent_id": 8,
+                    "qsn_number": "2.5",
+                    "qsn_name": "HAN",
+                    "ans_type": "multiple_input",
+                    "qst_status": "active",
+                    "required": "no",
+                    "instruction": null,
+                    "qsn_modify": "yes",
+                    "qsn_order": 13,
+                    "created_at": "2021-10-26T09:08:27.000000Z",
+                    "updated_at": "2021-10-26T09:08:27.000000Z",
+                    "answer": [
+                        {
+                            "id": 12,
+                            "enumerator_assign_id": 1,
+                            "qsn_id": 13,
+                            "answer": {
+                                "27": null,
+                                "28": null
+                            },
+                            "qsn_opt_id": null,
+                            "other_answer": null,
+                            "other_values": null,
+                            "created_at": "2021-11-01T11:31:05.000000Z",
+                            "updated_at": "2021-11-01T11:31:05.000000Z"
+                        }
+                    ],
+                    "question_option": [
+                        {
+                            "id": 27,
+                            "parent_id": 0,
+                            "qsn_id": 13,
+                            "option_number": "1",
+                            "option_name": "Year",
+                            "option_order": 1,
+                            "option_type": "input",
+                            "options": null,
+                            "remarks": null,
+                            "created_at": "2021-10-26T09:08:28.000000Z",
+                            "updated_at": "2021-10-26T09:08:28.000000Z"
+                        },
+                        {
+                            "id": 28,
+                            "parent_id": 0,
+                            "qsn_id": 13,
+                            "option_number": "2",
+                            "option_name": "Month",
+                            "option_order": 2,
+                            "option_type": "input",
+                            "options": null,
+                            "remarks": null,
+                            "created_at": "2021-10-26T09:08:28.000000Z",
+                            "updated_at": "2021-10-26T09:08:28.000000Z"
+                        }
+                    ]
+                }
+            ],
+            "answer": []
+        },
+        {
+            "id": 14,
+            "qsn_number": "3",
+            "qsn_name": "Economic Sector/Sub-sectors: (Select one which best applies to your business enterprise)",
+            "ans_type": "sector",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": null,
+            "sector": {
+                "id": 9,
+                "parent_id": 0,
+                "sector_name": "Agriculture",
+                "created_at": "2021-10-31T05:01:16.000000Z",
+                "updated_at": "2021-10-31T05:01:16.000000Z",
+                "detail": null
+            },
+            "sub_sectors": [
+                {
+                    "id": 10,
+                    "parent_id": 9,
+                    "sector_name": "Vegetable Farming",
+                    "created_at": "2021-10-31T05:04:23.000000Z",
+                    "updated_at": "2021-10-31T05:39:20.000000Z",
+                    "detail": "Green/Fresh Vegetable: (Leafs, Stems, Suckers, Roots, Rhizomes, Flowers, Mushrooms), Processed Vegetables, Seed Production & Certification, Vegetable Marketing Services, Cold Store Services, Consultancy Services"
+                },
+                {
+                    "id": 11,
+                    "parent_id": 9,
+                    "sector_name": "Fruit Crop Production",
+                    "created_at": "2021-10-31T05:04:48.000000Z",
+                    "updated_at": "2021-10-31T05:39:37.000000Z",
+                    "detail": "Fresh Fruits Production, Processed Fruits, Nursery/Sapling Production, Fruits Marketing Services, Cold Store Services, Consultancy Services"
+                },
+                {
+                    "id": 12,
+                    "parent_id": 9,
+                    "sector_name": "Agronomical Crops",
+                    "created_at": "2021-10-31T05:05:00.000000Z",
+                    "updated_at": "2021-10-31T05:39:52.000000Z",
+                    "detail": "Cereal Grain Production: (Paddy, Wheat, Maize, Millet, Buckwheat, Barley, etc.), Pulses, First Level Processing (Millings), Cash Crops (Sugarcane, Jute, Cotton, etc.), Oil Production"
+                },
+                {
+                    "id": 13,
+                    "parent_id": 9,
+                    "sector_name": "Livestock/Poultry Farming",
+                    "created_at": "2021-10-31T05:05:14.000000Z",
+                    "updated_at": "2021-10-31T05:40:00.000000Z",
+                    "detail": "Meat Production, Milk Production, Egg Production, Wool Production, Draft Purpose\r\nBreeding Services and Sales, Slaughtering and Cold Storage, Meat Processing, Hatchery Services, Consultancy Services, Marketing"
+                },
+                {
+                    "id": 14,
+                    "parent_id": 9,
+                    "sector_name": "Dairy Products",
+                    "created_at": "2021-10-31T05:05:24.000000Z",
+                    "updated_at": "2021-10-31T05:40:13.000000Z",
+                    "detail": "Milk Collection and Chilling, Milk Transportation,\r\nMilk Processing: (Fresh, Skim, Condensed and Powder milk), Milk Product Diversification: (Cheese, Butter, Ghee, Paneer, Khuwa, Sweets and etc.), Marketing, Storage Services"
+                },
+                {
+                    "id": 15,
+                    "parent_id": 9,
+                    "sector_name": "Bee/Sericulture",
+                    "created_at": "2021-10-31T05:05:32.000000Z",
+                    "updated_at": "2021-10-31T05:40:27.000000Z",
+                    "detail": "Honey Production, Wax/Artificial Honey Comb Production, Bee Hives Making, Bee Colony Production, Honey Processing.\r\nCocoon Production, Silk Fiber Extraction, Mulberry Nursery Raising, Marketing/ Storage, etc."
+                },
+                {
+                    "id": 16,
+                    "parent_id": 9,
+                    "sector_name": "Plantation and Cash Crop",
+                    "created_at": "2021-10-31T05:05:40.000000Z",
+                    "updated_at": "2021-10-31T05:40:35.000000Z",
+                    "detail": "Sugarcane, Jute, Tea and Coffee, Cardamoms, Zinger, Other Spices Productions, Tea and Coffee Processing, Storage and Marketing and etc."
+                },
+                {
+                    "id": 17,
+                    "parent_id": 9,
+                    "sector_name": "Fisheries",
+                    "created_at": "2021-10-31T05:05:56.000000Z",
+                    "updated_at": "2021-10-31T05:40:45.000000Z",
+                    "detail": "Table Fish Production from Pond Farming, Trout Farming, Traditional Fishing, Fish Processing, Hatchery Services, Marketing, etc."
+                },
+                {
+                    "id": 18,
+                    "parent_id": 9,
+                    "sector_name": "Floriculture",
+                    "created_at": "2021-10-31T05:06:04.000000Z",
+                    "updated_at": "2021-10-31T05:40:56.000000Z",
+                    "detail": "Flower Nursey Raising, Cut Flower Production, Marketing, Cold Storage Service, Consultancy Services for Flower Gardening and Landscaping"
+                },
+                {
+                    "id": 19,
+                    "parent_id": 9,
+                    "sector_name": "Herbal/Medicinal/Aromatic Plants",
+                    "created_at": "2021-10-31T05:06:17.000000Z",
+                    "updated_at": "2021-10-31T05:41:05.000000Z",
+                    "detail": "Collection, Nursery Raising, Cultivation, Processing (First Level), Storage/Marketing, Consultancy Services, etc."
+                },
+                {
+                    "id": 20,
+                    "parent_id": 9,
+                    "sector_name": "Silviculture",
+                    "created_at": "2021-10-31T05:06:27.000000Z",
+                    "updated_at": "2021-10-31T05:41:17.000000Z",
+                    "detail": "Nursery Raising, Plantation, Timber Harvesting, Seasoning and Processing, Rosin Collection, Nepali Paper Production, Marketing, etc."
+                },
+                {
+                    "id": 21,
+                    "parent_id": 9,
+                    "sector_name": "Agro-Based Enterprises",
+                    "created_at": "2021-10-31T05:06:40.000000Z",
+                    "updated_at": "2021-10-31T05:42:10.000000Z",
+                    "detail": "Fruits/Vegetable Processing, Oil, Pulse, Rice, Flour and Jute Mills,  Lump Crafting, Meat and Fish Processing, Fruit Juice Production, Wood and Bamboo Furniture Making, Alcoholic Beverage Production, Storage and Marketing, etc."
+                }
+            ],
+            "answer": [
+                {
+                    "id": 13,
+                    "enumerator_assign_id": 1,
+                    "qsn_id": 14,
+                    "answer": "13",
+                    "qsn_opt_id": null,
+                    "other_answer": null,
+                    "other_values": null,
+                    "created_at": "2021-11-01T11:31:08.000000Z",
+                    "updated_at": "2021-11-15T05:43:07.000000Z"
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "qsn_number": "4",
+            "qsn_name": "Please mentioned maximum four major products or services of your enterprises from the given dropdown lists respective sector:",
+            "ans_type": "multiple_input",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": null,
+            "question_options": [
+                {
+                    "id": 29,
+                    "qsn_id": 15,
+                    "option_number": "1",
+                    "option_name": "a",
+                    "option_order": 1,
+                    "option_type": "input",
+                    "options": null
+                },
+                {
+                    "id": 30,
+                    "qsn_id": 15,
+                    "option_number": "2",
+                    "option_name": "b",
+                    "option_order": 2,
+                    "option_type": "input",
+                    "options": null
+                },
+                {
+                    "id": 31,
+                    "qsn_id": 15,
+                    "option_number": "3",
+                    "option_name": "c",
+                    "option_order": 3,
+                    "option_type": "input",
+                    "options": null
+                },
+                {
+                    "id": 32,
+                    "qsn_id": 15,
+                    "option_number": "4",
+                    "option_name": "d",
+                    "option_order": 4,
+                    "option_type": "input",
+                    "options": null
+                }
+            ],
+            "answer": [
+                {
+                    "id": 15,
+                    "enumerator_assign_id": 1,
+                    "qsn_id": 15,
+                    "answer": {
+                        "29": "sfd1",
+                        "30": "fsd1",
+                        "31": "sfd1",
+                        "32": "sfd1"
+                    },
+                    "qsn_opt_id": null,
+                    "other_answer": null,
+                    "other_values": null,
+                    "created_at": "2021-11-01T11:33:08.000000Z",
+                    "updated_at": "2021-11-15T05:43:14.000000Z"
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "qsn_number": "5",
+            "qsn_name": "Please give the information on number and types of human resources (all types) currently working in your enterprise",
+            "ans_type": "external_table",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": null,
+            "human_resource": [
+                "Employer",
+                "Family Member",
+                "Employees",
+                "Others"
+            ],
+            "workers": [
+                "Managerial",
+                "Technical",
+                "Administrative",
+                "Assisting"
+            ],
+            "answer": [
+                {
+                    "id": 1,
+                    "enumerator_assign_id": 1,
+                    "resource_type": "employer",
+                    "working_type": "managerial",
+                    "male_count": 0,
+                    "female_count": 0,
+                    "minority_count": 0,
+                    "nepali_count": 0,
+                    "neighboring_count": 0,
+                    "foreigner_count": 0,
+                    "total": 0,
+                    "created_at": "2021-11-03T07:03:27.000000Z",
+                    "updated_at": "2021-11-03T07:03:27.000000Z"
+                },
+                {
+                    "id": 2,
+                    "enumerator_assign_id": 1,
+                    "resource_type": "employer",
+                    "working_type": "technical",
+                    "male_count": 0,
+                    "female_count": 0,
+                    "minority_count": 0,
+                    "nepali_count": 0,
+                    "neighboring_count": 0,
+                    "foreigner_count": 0,
+                    "total": 0,
+                    "created_at": "2021-11-03T07:03:27.000000Z",
+                    "updated_at": "2021-11-03T07:03:27.000000Z"
+                },
+                {
+                    "id": 3,
+                    "enumerator_assign_id": 1,
+                    "resource_type": "employer",
+                    "working_type": "administrative",
+                    "male_count": 0,
+                    "female_count": 0,
+                    "minority_count": 0,
+                    "nepali_count": 0,
+                    "neighboring_count": 0,
+                    "foreigner_count": 0,
+                    "total": 0,
+                    "created_at": "2021-11-03T07:03:27.000000Z",
+                    "updated_at": "2021-11-03T07:03:27.000000Z"
+                },
+                {
+                    "id": 4,
+                    "enumerator_assign_id": 1,
+                    "resource_type": "employer",
+                    "working_type": "assisting",
+                    "male_count": 0,
+                    "female_count": 0,
+                    "minority_count": 0,
+                    "nepali_count": 0,
+                    "neighboring_count": 0,
+                    "foreigner_count": 0,
+                    "total": 0,
+                    "created_at": "2021-11-03T07:03:27.000000Z",
+                    "updated_at": "2021-11-03T07:03:27.000000Z"
+                },
+                {
+                    "id": 5,
+                    "enumerator_assign_id": 1,
+                    "resource_type": "family_member",
+                    "working_type": "managerial",
+                    "male_count": 0,
+                    "female_count": 0,
+                    "minority_count": 0,
+                    "nepali_count": 0,
+                    "neighboring_count": 0,
+                    "foreigner_count": 0,
+                    "total": 0,
+                    "created_at": "2021-11-03T07:03:27.000000Z",
+                    "updated_at": "2021-11-03T07:03:27.000000Z"
+                },
+                {
+                    "id": 6,
+                    "enumerator_assign_id": 1,
+                    "resource_type": "family_member",
+                    "working_type": "technical",
+                    "male_count": 0,
+                    "female_count": 0,
+                    "minority_count": 0,
+                    "nepali_count": 0,
+                    "neighboring_count": 0,
+                    "foreigner_count": 0,
+                    "total": 0,
+                    "created_at": "2021-11-03T07:03:27.000000Z",
+                    "updated_at": "2021-11-03T07:03:27.000000Z"
+                },
+                {
+                    "id": 7,
+                    "enumerator_assign_id": 1,
+                    "resource_type": "family_member",
+                    "working_type": "administrative",
+                    "male_count": 0,
+                    "female_count": 0,
+                    "minority_count": 0,
+                    "nepali_count": 0,
+                    "neighboring_count": 0,
+                    "foreigner_count": 0,
+                    "total": 0,
+                    "created_at": "2021-11-03T07:03:27.000000Z",
+                    "updated_at": "2021-11-03T07:03:27.000000Z"
+                },
+                {
+                    "id": 8,
+                    "enumerator_assign_id": 1,
+                    "resource_type": "family_member",
+                    "working_type": "assisting",
+                    "male_count": 0,
+                    "female_count": 0,
+                    "minority_count": 0,
+                    "nepali_count": 0,
+                    "neighboring_count": 0,
+                    "foreigner_count": 0,
+                    "total": 0,
+                    "created_at": "2021-11-03T07:03:27.000000Z",
+                    "updated_at": "2021-11-03T07:03:27.000000Z"
+                },
+                {
+                    "id": 9,
+                    "enumerator_assign_id": 1,
+                    "resource_type": "employees",
+                    "working_type": "managerial",
+                    "male_count": 0,
+                    "female_count": 0,
+                    "minority_count": 0,
+                    "nepali_count": 0,
+                    "neighboring_count": 0,
+                    "foreigner_count": 0,
+                    "total": 0,
+                    "created_at": "2021-11-03T07:03:27.000000Z",
+                    "updated_at": "2021-11-03T07:03:27.000000Z"
+                },
+                {
+                    "id": 10,
+                    "enumerator_assign_id": 1,
+                    "resource_type": "employees",
+                    "working_type": "technical",
+                    "male_count": 0,
+                    "female_count": 0,
+                    "minority_count": 0,
+                    "nepali_count": 0,
+                    "neighboring_count": 0,
+                    "foreigner_count": 0,
+                    "total": 0,
+                    "created_at": "2021-11-03T07:03:27.000000Z",
+                    "updated_at": "2021-11-03T07:03:27.000000Z"
+                },
+                {
+                    "id": 11,
+                    "enumerator_assign_id": 1,
+                    "resource_type": "employees",
+                    "working_type": "administrative",
+                    "male_count": 0,
+                    "female_count": 0,
+                    "minority_count": 0,
+                    "nepali_count": 0,
+                    "neighboring_count": 0,
+                    "foreigner_count": 0,
+                    "total": 0,
+                    "created_at": "2021-11-03T07:03:27.000000Z",
+                    "updated_at": "2021-11-03T07:03:27.000000Z"
+                },
+                {
+                    "id": 12,
+                    "enumerator_assign_id": 1,
+                    "resource_type": "employees",
+                    "working_type": "assisting",
+                    "male_count": 0,
+                    "female_count": 0,
+                    "minority_count": 0,
+                    "nepali_count": 0,
+                    "neighboring_count": 0,
+                    "foreigner_count": 0,
+                    "total": 0,
+                    "created_at": "2021-11-03T07:03:27.000000Z",
+                    "updated_at": "2021-11-03T07:03:27.000000Z"
+                },
+                {
+                    "id": 13,
+                    "enumerator_assign_id": 1,
+                    "resource_type": "others",
+                    "working_type": "managerial",
+                    "male_count": 0,
+                    "female_count": 0,
+                    "minority_count": 0,
+                    "nepali_count": 0,
+                    "neighboring_count": 0,
+                    "foreigner_count": 0,
+                    "total": 0,
+                    "created_at": "2021-11-03T07:03:27.000000Z",
+                    "updated_at": "2021-11-03T07:03:27.000000Z"
+                },
+                {
+                    "id": 14,
+                    "enumerator_assign_id": 1,
+                    "resource_type": "others",
+                    "working_type": "technical",
+                    "male_count": 0,
+                    "female_count": 0,
+                    "minority_count": 0,
+                    "nepali_count": 0,
+                    "neighboring_count": 0,
+                    "foreigner_count": 0,
+                    "total": 0,
+                    "created_at": "2021-11-03T07:03:27.000000Z",
+                    "updated_at": "2021-11-03T07:03:27.000000Z"
+                },
+                {
+                    "id": 15,
+                    "enumerator_assign_id": 1,
+                    "resource_type": "others",
+                    "working_type": "administrative",
+                    "male_count": 12,
+                    "female_count": 45,
+                    "minority_count": 0,
+                    "nepali_count": 45,
+                    "neighboring_count": 0,
+                    "foreigner_count": 10,
+                    "total": 55,
+                    "created_at": "2021-11-03T07:03:27.000000Z",
+                    "updated_at": "2021-11-15T06:07:33.000000Z"
+                },
+                {
+                    "id": 16,
+                    "enumerator_assign_id": 1,
+                    "resource_type": "others",
+                    "working_type": "assisting",
+                    "male_count": 12,
+                    "female_count": 12,
+                    "minority_count": 12,
+                    "nepali_count": 10,
+                    "neighboring_count": 23,
+                    "foreigner_count": 12,
+                    "total": 45,
+                    "created_at": "2021-11-03T07:03:27.000000Z",
+                    "updated_at": "2021-11-15T06:07:33.000000Z"
+                }
+            ]
+        },
+        {
+            "id": 17,
+            "qsn_number": "6.a",
+            "qsn_name": "Please provide the following information related to technical human resources presently working in your enterprises. (Use this table to collect department wise information for bigger enterprises)",
+            "ans_type": "external_table",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": "Technical Human Resources Related Information",
+            "working_hour": [
+                "Full time(40 hours and +)",
+                "Part time(less than 40 hours)"
+            ],
+            "nature_of_work": [
+                "Regular",
+                "Seasonal"
+            ],
+            "training": [
+                "Trained",
+                "Untrained"
+            ],
+            "educational_qualification_general": [
+                {
+                    "id": 1,
+                    "name": "Illiterate",
+                    "type": "general",
+                    "created_at": "2021-09-27T11:44:31.000000Z",
+                    "updated_at": "2021-09-27T11:44:49.000000Z"
+                },
+                {
+                    "id": 2,
+                    "name": "Literate",
+                    "type": "general",
+                    "created_at": "2021-09-27T11:45:16.000000Z",
+                    "updated_at": "2021-09-27T11:45:16.000000Z"
+                },
+                {
+                    "id": 3,
+                    "name": "Basic Education (Class 8)",
+                    "type": "general",
+                    "created_at": "2021-09-27T11:45:29.000000Z",
+                    "updated_at": "2021-09-27T11:45:29.000000Z"
+                },
+                {
+                    "id": 4,
+                    "name": "Secondary Education (Class 10)",
+                    "type": "general",
+                    "created_at": "2021-09-27T11:45:38.000000Z",
+                    "updated_at": "2021-09-27T11:45:38.000000Z"
+                },
+                {
+                    "id": 5,
+                    "name": "Secondary Education (Class 12)",
+                    "type": "general",
+                    "created_at": "2021-09-27T11:45:50.000000Z",
+                    "updated_at": "2021-09-27T11:45:50.000000Z"
+                },
+                {
+                    "id": 6,
+                    "name": "Bachelor Degree",
+                    "type": "general",
+                    "created_at": "2021-09-27T11:45:57.000000Z",
+                    "updated_at": "2021-09-27T11:45:57.000000Z"
+                },
+                {
+                    "id": 7,
+                    "name": "Master Degree  and Above",
+                    "type": "general",
+                    "created_at": "2021-09-27T11:46:07.000000Z",
+                    "updated_at": "2021-09-27T11:46:07.000000Z"
+                }
+            ],
+            "educational_qualification_tvet": [
+                {
+                    "id": 8,
+                    "name": "Skill Level 1",
+                    "type": "tvet",
+                    "created_at": "2021-09-27T11:46:33.000000Z",
+                    "updated_at": "2021-09-27T11:46:33.000000Z"
+                },
+                {
+                    "id": 9,
+                    "name": "Skill Level 2",
+                    "type": "tvet",
+                    "created_at": "2021-09-27T11:46:41.000000Z",
+                    "updated_at": "2021-09-27T11:46:41.000000Z"
+                },
+                {
+                    "id": 10,
+                    "name": "Skill Level 3",
+                    "type": "tvet",
+                    "created_at": "2021-09-27T11:46:53.000000Z",
+                    "updated_at": "2021-09-27T11:46:53.000000Z"
+                },
+                {
+                    "id": 11,
+                    "name": "Pre-diploma",
+                    "type": "tvet",
+                    "created_at": "2021-09-27T11:47:10.000000Z",
+                    "updated_at": "2021-09-27T11:47:10.000000Z"
+                },
+                {
+                    "id": 12,
+                    "name": "Diploma",
+                    "type": "tvet",
+                    "created_at": "2021-09-27T11:47:26.000000Z",
+                    "updated_at": "2021-09-27T11:47:26.000000Z"
+                },
+                {
+                    "id": 13,
+                    "name": "Higher Technical Education (Bachelor Level)",
+                    "type": "tvet",
+                    "created_at": "2021-09-27T11:47:40.000000Z",
+                    "updated_at": "2021-09-27T11:47:40.000000Z"
+                },
+                {
+                    "id": 14,
+                    "name": "Higher Technical Education (Master and Above",
+                    "type": "tvet",
+                    "created_at": "2021-09-27T11:47:58.000000Z",
+                    "updated_at": "2021-09-27T11:47:58.000000Z"
+                }
+            ],
+            "answer": [
+                {
+                    "id": 1,
+                    "enumerator_assign_id": 1,
+                    "emp_code": "234",
+                    "gender": "male",
+                    "emp_name": null,
+                    "occupation": "occupation",
+                    "working_time": "full",
+                    "work_nature": "regular",
+                    "training": "trained",
+                    "ojt_apprentice": "test",
+                    "edu_qua_id": 2,
+                    "work_exp1": "5",
+                    "work_exp2": "2",
+                    "created_at": "2021-11-01T11:34:30.000000Z",
+                    "updated_at": "2021-11-01T11:34:30.000000Z"
+                },
+                {
+                    "id": 3,
+                    "enumerator_assign_id": 1,
+                    "emp_code": "df",
+                    "gender": "male",
+                    "emp_name": null,
+                    "occupation": "fd",
+                    "working_time": "full",
+                    "work_nature": "seasonal",
+                    "training": "untrained",
+                    "ojt_apprentice": "er",
+                    "edu_qua_id": 4,
+                    "work_exp1": "2",
+                    "work_exp2": "2",
+                    "created_at": "2021-11-14T06:56:02.000000Z",
+                    "updated_at": "2021-11-14T06:56:02.000000Z"
+                },
+                {
+                    "id": 4,
+                    "enumerator_assign_id": 1,
+                    "emp_code": "ser",
+                    "gender": "female",
+                    "emp_name": null,
+                    "occupation": "er",
+                    "working_time": "full",
+                    "work_nature": "seasonal",
+                    "training": "trained",
+                    "ojt_apprentice": "wre",
+                    "edu_qua_id": 4,
+                    "work_exp1": "2",
+                    "work_exp2": "21",
+                    "created_at": "2021-11-14T06:56:02.000000Z",
+                    "updated_at": "2021-11-14T06:56:02.000000Z"
+                },
+                {
+                    "id": 6,
+                    "enumerator_assign_id": 1,
+                    "emp_code": "tesst",
+                    "gender": "male",
+                    "emp_name": null,
+                    "occupation": "reret",
+                    "working_time": "part",
+                    "work_nature": "seasonal",
+                    "training": "untrained",
+                    "ojt_apprentice": "rt",
+                    "edu_qua_id": 11,
+                    "work_exp1": "3",
+                    "work_exp2": "34",
+                    "created_at": "2021-11-15T05:45:50.000000Z",
+                    "updated_at": "2021-11-15T05:45:50.000000Z"
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "qsn_number": "6.b",
+            "qsn_name": "Please provide the employment status of following occupations in your enterprises as per the mentioned table.",
+            "ans_type": "external_table",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": null,
+            "sector": {
+                "id": 9,
+                "parent_id": 0,
+                "sector_name": "Agriculture",
+                "created_at": "2021-10-31T05:01:16.000000Z",
+                "updated_at": "2021-10-31T05:01:16.000000Z",
+                "detail": null
+            },
+            "occupations": [
+                {
+                    "id": 4,
+                    "sector_id": 9,
+                    "occupation_name": "Agriculture Farm Technician Level 2",
+                    "created_at": null,
+                    "updated_at": null
+                }
+            ],
+            "answer": [
+                {
+                    "id": 1,
+                    "name": 0
+                },
+                {
+                    "id": 2,
+                    "name": 0
+                },
+                {
+                    "id": 3,
+                    "name": 0
+                }
+            ]
+        },
+        {
+            "id": 19,
+            "qsn_number": "7",
+            "qsn_name": "How do you find the average competency level of these technical staffs presently working in your enterprises?",
+            "ans_type": "radio",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": null,
+            "question_options": [
+                {
+                    "id": 33,
+                    "qsn_id": 19,
+                    "option_number": "a",
+                    "option_name": "Highly satisfactory competency level",
+                    "option_order": 1,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 34,
+                    "qsn_id": 19,
+                    "option_number": "b",
+                    "option_name": "Satisfactory competency level",
+                    "option_order": 2,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 35,
+                    "qsn_id": 19,
+                    "option_number": "c",
+                    "option_name": "Average competency level",
+                    "option_order": 3,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 36,
+                    "qsn_id": 19,
+                    "option_number": "d",
+                    "option_name": "Unsatisfactory competency level",
+                    "option_order": 4,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 37,
+                    "qsn_id": 19,
+                    "option_number": "e",
+                    "option_name": "Highly unsatisfactory competence level",
+                    "option_order": 5,
+                    "option_type": "radio",
+                    "options": null
+                }
+            ],
+            "answer": [
+                {
+                    "id": 16,
+                    "enumerator_assign_id": 1,
+                    "qsn_id": 19,
+                    "answer": null,
+                    "qsn_opt_id": 34,
+                    "other_answer": null,
+                    "other_values": null,
+                    "created_at": "2021-11-01T11:36:06.000000Z",
+                    "updated_at": "2021-11-15T05:46:17.000000Z"
+                }
+            ]
+        },
+        {
+            "id": 20,
+            "qsn_number": "8",
+            "qsn_name": "Is there any other specific occupation in your enterprise which you usually feel harder to recruit?",
+            "ans_type": "cond_radio",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": null,
+            "question_options": [
+                {
+                    "id": 38,
+                    "qsn_id": 20,
+                    "option_number": "a",
+                    "option_name": "Yes",
+                    "option_order": 1,
+                    "option_type": "cond_radio",
+                    "options": null
+                },
+                {
+                    "id": 39,
+                    "qsn_id": 20,
+                    "option_number": "b",
+                    "option_name": "No",
+                    "option_order": 2,
+                    "option_type": "radio",
+                    "options": null
+                }
+            ],
+            "answer": [
+                {
+                    "id": 17,
+                    "enumerator_assign_id": 1,
+                    "qsn_id": 20,
+                    "answer": null,
+                    "qsn_opt_id": 38,
+                    "other_answer": null,
+                    "other_values": null,
+                    "created_at": "2021-11-01T11:36:23.000000Z",
+                    "updated_at": "2021-11-15T06:38:53.000000Z",
+                    "other_occup": [
+                        {
+                            "id": 16,
+                            "enumerator_assign_id": 1,
+                            "occupation_name": "dfsd",
+                            "present_demand": "df",
+                            "demand_two_year": "df",
+                            "demand_five_year": "df",
+                            "created_at": "2021-11-15T06:38:53.000000Z",
+                            "updated_at": "2021-11-15T06:38:53.000000Z"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 21,
+            "qsn_number": "9",
+            "qsn_name": "Is it easy to get the trained workforce/human resources to run/operate your business comfortably?",
+            "ans_type": "cond_radio",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": null,
+            "question_options": [
+                {
+                    "id": 40,
+                    "qsn_id": 21,
+                    "option_number": "a",
+                    "option_name": "Yes",
+                    "option_order": 1,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 41,
+                    "qsn_id": 21,
+                    "option_number": "b",
+                    "option_name": "No",
+                    "option_order": 2,
+                    "option_type": "cond_radio",
+                    "options": null
+                }
+            ],
+            "answer": [
+                {
+                    "id": 18,
+                    "enumerator_assign_id": 1,
+                    "qsn_id": 21,
+                    "answer": null,
+                    "qsn_opt_id": 41,
+                    "other_answer": null,
+                    "other_values": null,
+                    "created_at": "2021-11-01T11:36:31.000000Z",
+                    "updated_at": "2021-11-14T05:24:04.000000Z"
+                }
+            ]
+        },
+        {
+            "id": 23,
+            "qsn_number": "10",
+            "qsn_name": "What is the major source of technical human resources for your enterprises at present?",
+            "ans_type": "radio",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": null,
+            "question_options": [
+                {
+                    "id": 42,
+                    "qsn_id": 23,
+                    "option_number": "a",
+                    "option_name": "Certified by NSTB as skilled workforces",
+                    "option_order": 1,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 43,
+                    "qsn_id": 23,
+                    "option_number": "b",
+                    "option_name": "Trained under CTEVT developed curricula (despite not having NSTB certificate)",
+                    "option_order": 2,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 44,
+                    "qsn_id": 23,
+                    "option_number": "c",
+                    "option_name": "Trained under locally developed curricula (other than developed or approved by CTEVT)",
+                    "option_order": 3,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 45,
+                    "qsn_id": 23,
+                    "option_number": "d",
+                    "option_name": "Trained under formal training wings of company itself",
+                    "option_order": 4,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 46,
+                    "qsn_id": 23,
+                    "option_number": "e",
+                    "option_name": "Self-trained under formal or none formal apprenticeship modality",
+                    "option_order": 5,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 47,
+                    "qsn_id": 23,
+                    "option_number": "f",
+                    "option_name": "Having experiences developed working in other companies",
+                    "option_order": 6,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 48,
+                    "qsn_id": 23,
+                    "option_number": "g",
+                    "option_name": "Recruit as workers from neighboring and other countries",
+                    "option_order": 7,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 49,
+                    "qsn_id": 23,
+                    "option_number": "h",
+                    "option_name": "Others",
+                    "option_order": 8,
+                    "option_type": "others",
+                    "options": null
+                }
+            ],
+            "answer": [
+                {
+                    "id": 20,
+                    "enumerator_assign_id": 1,
+                    "qsn_id": 23,
+                    "answer": null,
+                    "qsn_opt_id": 45,
+                    "other_answer": null,
+                    "other_values": null,
+                    "created_at": "2021-11-01T11:36:35.000000Z",
+                    "updated_at": "2021-11-15T05:46:32.000000Z"
+                }
+            ]
+        },
+        {
+            "id": 24,
+            "qsn_number": "11",
+            "qsn_name": "How the skills acquire by formally trained individuals from the training institutes matches to your business requirement?",
+            "ans_type": "radio",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": null,
+            "question_options": [
+                {
+                    "id": 50,
+                    "qsn_id": 24,
+                    "option_number": "a",
+                    "option_name": "Matches up to 20%",
+                    "option_order": 1,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 51,
+                    "qsn_id": 24,
+                    "option_number": "b",
+                    "option_name": "Matches 21 to 40%",
+                    "option_order": 2,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 52,
+                    "qsn_id": 24,
+                    "option_number": "c",
+                    "option_name": "Matches 41 to 60%",
+                    "option_order": 3,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 53,
+                    "qsn_id": 24,
+                    "option_number": "d",
+                    "option_name": "Matches 61 to 80%",
+                    "option_order": 4,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 54,
+                    "qsn_id": 24,
+                    "option_number": "e",
+                    "option_name": "Matches 81 to 100%",
+                    "option_order": 5,
+                    "option_type": "radio",
+                    "options": null
+                }
+            ],
+            "answer": [
+                {
+                    "id": 21,
+                    "enumerator_assign_id": 1,
+                    "qsn_id": 24,
+                    "answer": null,
+                    "qsn_opt_id": 52,
+                    "other_answer": null,
+                    "other_values": null,
+                    "created_at": "2021-11-01T11:36:39.000000Z",
+                    "updated_at": "2021-11-15T05:46:36.000000Z"
+                }
+            ]
+        },
+        {
+            "id": 25,
+            "qsn_number": "12",
+            "qsn_name": "Do you provide employment to both trained (trained under formal/non formal training programs) and untrained (learned from experience) technical workers in your enterprises?",
+            "ans_type": "multiple_input",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": null,
+            "question_options": [
+                {
+                    "id": 55,
+                    "qsn_id": 25,
+                    "option_number": "1",
+                    "option_name": "Trained and Experienced",
+                    "option_order": 1,
+                    "option_type": "input",
+                    "options": null
+                },
+                {
+                    "id": 56,
+                    "qsn_id": 25,
+                    "option_number": "2",
+                    "option_name": "Trained and Inexperienced",
+                    "option_order": 2,
+                    "option_type": "input",
+                    "options": null
+                },
+                {
+                    "id": 87,
+                    "qsn_id": 25,
+                    "option_number": "3",
+                    "option_name": "Untrained and Experienced",
+                    "option_order": 3,
+                    "option_type": "input",
+                    "options": null
+                },
+                {
+                    "id": 88,
+                    "qsn_id": 25,
+                    "option_number": "4",
+                    "option_name": "Untrained and Inexperienced",
+                    "option_order": 4,
+                    "option_type": "input",
+                    "options": null
+                }
+            ],
+            "answer": [
+                {
+                    "id": 22,
+                    "enumerator_assign_id": 1,
+                    "qsn_id": 25,
+                    "answer": {
+                        "55": "4",
+                        "56": "3",
+                        "87": "2",
+                        "88": "1"
+                    },
+                    "qsn_opt_id": 55,
+                    "other_answer": null,
+                    "other_values": null,
+                    "created_at": "2021-11-01T11:36:43.000000Z",
+                    "updated_at": "2021-11-15T05:46:47.000000Z"
+                }
+            ]
+        },
+        {
+            "id": 27,
+            "qsn_number": "13",
+            "qsn_name": "How you would rate your workers on the following soft skill aspects under the category of 5. Excellent 4. Very good 3. Good 3. Satisfactory 1. Poor",
+            "ans_type": "external_table",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": null,
+            "worker_skills": [
+                "Communication Skills",
+                "Punctuality/Integrity",
+                "Team Work behaviors",
+                "Leadership Skills",
+                "Interpersonal Skills"
+            ],
+            "answer": []
+        },
+        {
+            "id": 28,
+            "qsn_number": "14",
+            "qsn_name": "Based on your experience, what was the scope and trend of nature of the business you involved in the past three years ignoring the effect of COVID-19?",
+            "ans_type": "radio",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": null,
+            "question_options": [
+                {
+                    "id": 62,
+                    "qsn_id": 28,
+                    "option_number": "a",
+                    "option_name": "Scope was decreasing",
+                    "option_order": 1,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 63,
+                    "qsn_id": 28,
+                    "option_number": "b",
+                    "option_name": "Scope was constant",
+                    "option_order": 2,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 64,
+                    "qsn_id": 28,
+                    "option_number": "c",
+                    "option_name": "Scope was increasing",
+                    "option_order": 3,
+                    "option_type": "radio",
+                    "options": null
+                }
+            ],
+            "answer": [
+                {
+                    "id": 24,
+                    "enumerator_assign_id": 1,
+                    "qsn_id": 28,
+                    "answer": null,
+                    "qsn_opt_id": 62,
+                    "other_answer": null,
+                    "other_values": null,
+                    "created_at": "2021-11-01T11:36:51.000000Z",
+                    "updated_at": "2021-11-15T05:47:05.000000Z"
+                }
+            ]
+        },
+        {
+            "id": 29,
+            "qsn_number": "15",
+            "qsn_name": "In your opinion, what will be the trend of this sort of business in the future (next three or five years)?",
+            "ans_type": "radio",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": null,
+            "question_options": [
+                {
+                    "id": 65,
+                    "qsn_id": 29,
+                    "option_number": "a",
+                    "option_name": "Scope seems decreasing",
+                    "option_order": 1,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 66,
+                    "qsn_id": 29,
+                    "option_number": "b",
+                    "option_name": "Scope seems constant",
+                    "option_order": 2,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 67,
+                    "qsn_id": 29,
+                    "option_number": "c",
+                    "option_name": "Scope seems increasing",
+                    "option_order": 3,
+                    "option_type": "radio",
+                    "options": null
+                }
+            ],
+            "answer": [
+                {
+                    "id": 25,
+                    "enumerator_assign_id": 1,
+                    "qsn_id": 29,
+                    "answer": null,
+                    "qsn_opt_id": 65,
+                    "other_answer": null,
+                    "other_values": null,
+                    "created_at": "2021-11-01T11:36:54.000000Z",
+                    "updated_at": "2021-11-15T05:47:09.000000Z"
+                }
+            ]
+        },
+        {
+            "id": 30,
+            "qsn_number": "16",
+            "qsn_name": "What is the future plan of your business?",
+            "ans_type": "radio",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": null,
+            "question_options": [
+                {
+                    "id": 68,
+                    "qsn_id": 30,
+                    "option_number": "a",
+                    "option_name": "I have plan to continue this business in the same scale",
+                    "option_order": 1,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 69,
+                    "qsn_id": 30,
+                    "option_number": "b",
+                    "option_name": "I have plan to continue this business with decreasing its scale",
+                    "option_order": 2,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 70,
+                    "qsn_id": 30,
+                    "option_number": "c",
+                    "option_name": "I have plan to continue this business with increasing its scale.",
+                    "option_order": 3,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 71,
+                    "qsn_id": 30,
+                    "option_number": "d",
+                    "option_name": "I have plan to shift to another business.",
+                    "option_order": 4,
+                    "option_type": "radio",
+                    "options": null
+                },
+                {
+                    "id": 72,
+                    "qsn_id": 30,
+                    "option_number": "e",
+                    "option_name": "I am going to terminate this business without any alternative plan.",
+                    "option_order": 5,
+                    "option_type": "radio",
+                    "options": null
+                }
+            ],
+            "answer": [
+                {
+                    "id": 33,
+                    "enumerator_assign_id": 1,
+                    "qsn_id": 30,
+                    "answer": null,
+                    "qsn_opt_id": 70,
+                    "other_answer": null,
+                    "other_values": null,
+                    "created_at": "2021-11-11T09:34:32.000000Z",
+                    "updated_at": "2021-11-15T05:47:12.000000Z"
+                }
+            ]
+        },
+        {
+            "id": 31,
+            "qsn_number": "17",
+            "qsn_name": "Do you plan to adopt the future new technology?",
+            "ans_type": "cond_radio",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": null,
+            "question_options": [
+                {
+                    "id": 73,
+                    "qsn_id": 31,
+                    "option_number": "a",
+                    "option_name": "Yes",
+                    "option_order": 1,
+                    "option_type": "cond_radio",
+                    "options": null
+                },
+                {
+                    "id": 74,
+                    "qsn_id": 31,
+                    "option_number": "b",
+                    "option_name": "No",
+                    "option_order": 2,
+                    "option_type": "radio",
+                    "options": null
+                }
+            ],
+            "answer": [
+                {
+                    "id": 26,
+                    "enumerator_assign_id": 1,
+                    "qsn_id": 31,
+                    "answer": null,
+                    "qsn_opt_id": 73,
+                    "other_answer": null,
+                    "other_values": null,
+                    "created_at": "2021-11-01T11:37:01.000000Z",
+                    "updated_at": "2021-11-14T05:56:22.000000Z"
+                },
+                {
+                    "id": 34,
+                    "enumerator_assign_id": 1,
+                    "qsn_id": 31,
+                    "answer": null,
+                    "qsn_opt_id": 74,
+                    "other_answer": null,
+                    "other_values": null,
+                    "created_at": "2021-11-12T10:45:50.000000Z",
+                    "updated_at": "2021-11-12T10:45:50.000000Z"
+                }
+            ]
+        },
+        {
+            "id": 37,
+            "qsn_number": "18",
+            "qsn_name": "If you want to shift business to other sectors or plan to expand the present business, how many additional skilled workers do you require as per your plan?",
+            "ans_type": "cond_radio",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": null,
+            "question_options": [
+                {
+                    "id": 89,
+                    "qsn_id": 37,
+                    "option_number": "1",
+                    "option_name": "Yes",
+                    "option_order": 1,
+                    "option_type": "cond_radio",
+                    "options": null
+                },
+                {
+                    "id": 90,
+                    "qsn_id": 37,
+                    "option_number": "2",
+                    "option_name": "No",
+                    "option_order": 2,
+                    "option_type": "radio",
+                    "options": null
+                }
+            ],
+            "answer": [
+                {
+                    "id": 36,
+                    "enumerator_assign_id": 1,
+                    "qsn_id": 37,
+                    "answer": null,
+                    "qsn_opt_id": 89,
+                    "other_answer": null,
+                    "other_values": null,
+                    "created_at": "2021-11-14T04:48:45.000000Z",
+                    "updated_at": "2021-11-15T04:41:01.000000Z"
+                }
+            ]
+        },
+        {
+            "id": 32,
+            "qsn_number": "19",
+            "qsn_name": "How you are coordinated by TVET institutions or vice versa regarding the delivery of TVET programs (Multiple answers)",
+            "ans_type": "checkbox",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": null,
+            "question_options": [
+                {
+                    "id": 75,
+                    "qsn_id": 32,
+                    "option_number": "1",
+                    "option_name": "Trainees frequently visits our industry for work-place practices",
+                    "option_order": 1,
+                    "option_type": "checkbox",
+                    "options": null
+                },
+                {
+                    "id": 76,
+                    "qsn_id": 32,
+                    "option_number": "2",
+                    "option_name": "Trainees occasionally visits our industry for OJT as work-place practice",
+                    "option_order": 2,
+                    "option_type": "checkbox",
+                    "options": null
+                },
+                {
+                    "id": 77,
+                    "qsn_id": 32,
+                    "option_number": "3",
+                    "option_name": "Institutes invites me for curriculum development process.",
+                    "option_order": 3,
+                    "option_type": "checkbox",
+                    "options": null
+                },
+                {
+                    "id": 78,
+                    "qsn_id": 32,
+                    "option_number": "4",
+                    "option_name": "Institute occasionally invites me for policy level interactions.",
+                    "option_order": 4,
+                    "option_type": "checkbox",
+                    "options": null
+                }
+            ],
+            "answer": [
+                {
+                    "id": 27,
+                    "enumerator_assign_id": 1,
+                    "qsn_id": 32,
+                    "answer": "76,77",
+                    "qsn_opt_id": null,
+                    "other_answer": null,
+                    "other_values": null,
+                    "created_at": "2021-11-01T11:37:04.000000Z",
+                    "updated_at": "2021-11-15T05:49:30.000000Z"
+                }
+            ]
+        },
+        {
+            "id": 33,
+            "qsn_number": "20",
+            "qsn_name": "Among the various problems for establishing and operating business in your sector or sub-sector, how do you prioritize the problems of human resources? (Fill the boxes in numerical ranking by giving the highest number for high priority)",
+            "ans_type": "multiple_input",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": null,
+            "question_options": [
+                {
+                    "id": 79,
+                    "qsn_id": 33,
+                    "option_number": "a",
+                    "option_name": "Political instability",
+                    "option_order": 1,
+                    "option_type": "input",
+                    "options": null
+                },
+                {
+                    "id": 80,
+                    "qsn_id": 33,
+                    "option_number": "b",
+                    "option_name": "Rules/Regulations of the government",
+                    "option_order": 2,
+                    "option_type": "input",
+                    "options": null
+                },
+                {
+                    "id": 81,
+                    "qsn_id": 33,
+                    "option_number": "c",
+                    "option_name": "Bureaucratic/administrative hurdles",
+                    "option_order": 3,
+                    "option_type": "input",
+                    "options": null
+                },
+                {
+                    "id": 82,
+                    "qsn_id": 33,
+                    "option_number": "d",
+                    "option_name": "Unfair competition among the enterprisers",
+                    "option_order": 4,
+                    "option_type": "input",
+                    "options": null
+                },
+                {
+                    "id": 83,
+                    "qsn_id": 33,
+                    "option_number": "e",
+                    "option_name": "Problems of skilled human resources",
+                    "option_order": 5,
+                    "option_type": "input",
+                    "options": null
+                },
+                {
+                    "id": 84,
+                    "qsn_id": 33,
+                    "option_number": "f",
+                    "option_name": "Others",
+                    "option_order": 6,
+                    "option_type": "others",
+                    "options": null
+                }
+            ],
+            "answer": [
+                {
+                    "id": 28,
+                    "enumerator_assign_id": 1,
+                    "qsn_id": 33,
+                    "answer": {
+                        "79": "1",
+                        "80": "2",
+                        "81": "3",
+                        "82": "4",
+                        "83": "5",
+                        "84": "6"
+                    },
+                    "qsn_opt_id": null,
+                    "other_answer": null,
+                    "other_values": null,
+                    "created_at": "2021-11-01T11:37:16.000000Z",
+                    "updated_at": "2021-11-15T05:49:58.000000Z"
+                }
+            ]
+        },
+        {
+            "id": 35,
+            "qsn_number": "21",
+            "qsn_name": "In your business, is there such occupations where you prefer to hire more number of women workers?",
+            "ans_type": "radio",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": null,
+            "question_options": [
+                {
+                    "id": 85,
+                    "qsn_id": 35,
+                    "option_number": "1",
+                    "option_name": "Yes",
+                    "option_order": 1,
+                    "option_type": "others",
+                    "options": null
+                },
+                {
+                    "id": 86,
+                    "qsn_id": 35,
+                    "option_number": "2",
+                    "option_name": "No",
+                    "option_order": 2,
+                    "option_type": "others",
+                    "options": null
+                }
+            ],
+            "answer": [
+                {
+                    "id": 32,
+                    "enumerator_assign_id": 1,
+                    "qsn_id": 35,
+                    "answer": null,
+                    "qsn_opt_id": 85,
+                    "other_answer": "fgghfgerwe",
+                    "other_values": null,
+                    "created_at": "2021-11-08T06:12:24.000000Z",
+                    "updated_at": "2021-11-15T05:50:06.000000Z"
+                }
+            ]
+        },
+        {
+            "id": 34,
+            "qsn_number": "22",
+            "qsn_name": "Please give some suggestion to effectively establish and operationalize the “Employer Led Labour Market Secretariat –ELMS” .",
+            "ans_type": "input",
+            "qsn_status": "active",
+            "required": "yes",
+            "instruction": null,
+            "answer": [
+                {
+                    "id": 29,
+                    "enumerator_assign_id": 1,
+                    "qsn_id": 34,
+                    "answer": "suggestion1",
+                    "qsn_opt_id": null,
+                    "other_answer": null,
+                    "other_values": null,
+                    "created_at": "2021-11-01T11:37:34.000000Z",
+                    "updated_at": "2021-11-15T05:50:12.000000Z"
+                }
+            ]
+        }
+    ]
+}

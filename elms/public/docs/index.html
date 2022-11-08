@@ -1,0 +1,3235 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Laravel Documentation</title>
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../docs/css/theme-default.style.css" media="screen">
+    <link rel="stylesheet" href="../docs/css/theme-default.print.css" media="print">
+    <script src="../docs/js/theme-default-3.14.1.js"></script>
+
+    <link rel="stylesheet"
+          href="//unpkg.com/@highlightjs/cdn-assets@10.7.2/styles/obsidian.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@10.7.2/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <script src="//cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+    <script>
+        var baseUrl = "http://localhost:8001";
+        var useCsrf = Boolean();
+        var csrfUrl = "/sanctum/csrf-cookie";
+    </script>
+    <script src="../docs/js/tryitout-3.14.1.js"></script>
+
+</head>
+
+<body data-languages="[&quot;bash&quot;,&quot;javascript&quot;]">
+<a href="#" id="nav-button">
+      <span>
+        MENU
+        <img src="../docs/images/navbar.png" alt="navbar-image" />
+      </span>
+</a>
+<div class="tocify-wrapper">
+                <div class="lang-selector">
+                            <a href="#" data-language-name="bash">bash</a>
+                            <a href="#" data-language-name="javascript">javascript</a>
+                    </div>
+        <div class="search">
+        <input type="text" class="search" id="input-search" placeholder="Search">
+    </div>
+    <ul class="search-results"></ul>
+
+    <ul id="toc">
+    </ul>
+
+            <ul class="toc-footer" id="toc-footer">
+                            <li><a href="../docs/collection.json">View Postman collection</a></li>
+                            <li><a href="../docs/openapi.yaml">View OpenAPI spec</a></li>
+                            <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
+                    </ul>
+            <ul class="toc-footer" id="last-updated">
+            <li>Last updated: November 9 2021</li>
+        </ul>
+</div>
+<div class="page-wrapper">
+    <div class="dark-box"></div>
+    <div class="content">
+        <h1>Introduction</h1>
+<p>This documentation aims to provide all the information you need to work with our API.</p>
+<aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
+You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
+<blockquote>
+<p>Base URL</p>
+</blockquote>
+<pre><code class="language-yaml">http://localhost:8001</code></pre>
+
+        <h1>Authenticating requests</h1>
+<p>This API is not authenticated.</p>
+
+        <h1 id="endpoints">Endpoints</h1>
+
+    
+
+            <h2 id="endpoints-POSTapi-v1-login">Log in the user.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-v1-login">
+<blockquote>Example request:</blockquote>
+
+
+<pre><code class="language-bash">curl --request POST \
+    "http://localhost:8001/api/v1/login" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"email\": \"enumerator@gmail.com\",
+    \"password\": \"ymc123\"
+}"
+</code></pre>
+
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8001/api/v1/login"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "email": "enumerator@gmail.com",
+    "password": "ymc123"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre>
+</span>
+
+<span id="example-responses-POSTapi-v1-login">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">data:{
+&quot;user&quot;: {
+     &quot;id&quot;: 1,
+      &quot;name&quot;: &quot;tr&quot;,
+      &quot;email&quot;: &quot;enumerator@gmail.com&quot;,
+     &quot;password&quot;: &quot;$2y$10$H0UMAq1L7v6cJ6nbQWdVQuy84tPD0Aj5X.Fts506dZ4KvBH3Qklre&quot;,
+      &quot;user_status&quot;: &quot;active&quot;,
+      &quot;phone_no&quot;: &quot;9874125632&quot;,
+     &quot;remember_token&quot;: null,
+     &quot;created_at&quot;: &quot;2021-10-20T07:02:01.000000Z&quot;,
+     &quot;updated_at&quot;: &quot;2021-10-20T07:02:01.000000Z&quot;,
+     &quot;pradesh_id&quot;: 2,
+     &quot;district_id&quot;: 16,
+     &quot;muni_id&quot;: 156,
+     &quot;ward_no&quot;: 14
+  },
+ &quot;token&quot;: &quot;eyJ0eXA...&quot;,
+ &quot;expires_in&quot;: &quot;2022-11-08T09:38:14.000000Z&quot;,
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-v1-login" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-v1-login"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-v1-login"></code></pre>
+</span>
+<span id="execution-error-POSTapi-v1-login" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-v1-login"></code></pre>
+</span>
+<form id="form-POSTapi-v1-login" data-method="POST"
+      data-path="api/v1/login"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-v1-login', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-v1-login"
+                    onclick="tryItOut('POSTapi-v1-login');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-v1-login"
+                    onclick="cancelTryOut('POSTapi-v1-login');" hidden>Cancel
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-v1-login" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/v1/login</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="email"
+               data-endpoint="POSTapi-v1-login"
+               value="enumerator@gmail.com"
+               data-component="body" hidden>
+    <br>
+<p>The email of the  user.</p>
+        </p>
+                <p>
+            <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="password"
+               data-endpoint="POSTapi-v1-login"
+               value="ymc123"
+               data-component="body" hidden>
+    <br>
+<p>The password of the  user.</p>
+        </p>
+        </form>
+
+            <h2 id="endpoints-GETapi-v1-recent-survey">Get Recent Survey.</h2>
+
+<p>
+</p>
+
+<p>This Api provides the recent survey to be done.Change bearer token according to user in header. Provides list of survey to be shown in the dashboard</p>
+
+<span id="example-requests-GETapi-v1-recent-survey">
+<blockquote>Example request:</blockquote>
+
+
+<pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8001/api/v1/recent-survey" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTgxMzYwYzUxMmViNTNhMDBkZDEyNGI2NzQwMjg0NDY4NzBkZTUyNWVkMDhiOGE0YjhhN2NhZGQ3MjVkYzQyZThmNzMwZDEzMjEwZDE2OWYiLCJpYXQiOjE2MzYzNjYyNDguMjM4OTUyLCJuYmYiOjE2MzYzNjYyNDguMjM4OTU1LCJleHAiOjE2Njc5MDIyNDguMjIxMDQyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.JOPUHZSws9mDsAvw3AVDeNHWtKGcGsOKpk1raZM4fkm02n4wD2yBfcUL2ZjbNmWUDwiuILu9AVph59Z0xNO2qlgZ6Ob2pzgLja_J7wM3FALzrxwtqHYTSwIzUdVBDkhWoZBYoaEmWUR2t5lqqlIehjQ5HwpuaS1qRhWAObyZqb6x4Z3efk5sS0BjLapVcAObqXya2YXYoUjLybvIsRugwTq2jysDnj-BBBbqWM03MTW7Vv7b6xd5IIuobj3P2SuQJyK33tqXt3ArK-FI5BNCfW0xCJLDupjFYOfZ98t36qDUUSMrz_exfdogYZpCBicKY7J9oYu59dCj8imitaIxC5SOm9PabDOJaNtQan_kKZf5LP7c_tjanDxx0l1eXLqn1JO44Y0BATzJ6aTwWG_MYgyCr5ym6uFENHJJfKBHqG0i-wBIskZjHeHg-PJqdDkmQS5FfwG8d7d23_SjhVziz7aiOkOLEVBOEFGdkKUltuhS_iPwCcFOU-cGTJLQYfWnQZMJg3t_5zKntty5A4XY93CCZO6kg8H-6KPRW2Ki6xxHm800Y0keJsKgGaywfx-DUYMaEHMmp4-sMIHkvZf5EeDRfxVU0EkgLqLn6aKRwJut0_YE32W8QTnTVgkzF3aFgYB8RZg56TfCtkwgjhu0IaZ4c_BE2Tp46AEU4jeijdA"</code></pre>
+
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8001/api/v1/recent-survey"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTgxMzYwYzUxMmViNTNhMDBkZDEyNGI2NzQwMjg0NDY4NzBkZTUyNWVkMDhiOGE0YjhhN2NhZGQ3MjVkYzQyZThmNzMwZDEzMjEwZDE2OWYiLCJpYXQiOjE2MzYzNjYyNDguMjM4OTUyLCJuYmYiOjE2MzYzNjYyNDguMjM4OTU1LCJleHAiOjE2Njc5MDIyNDguMjIxMDQyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.JOPUHZSws9mDsAvw3AVDeNHWtKGcGsOKpk1raZM4fkm02n4wD2yBfcUL2ZjbNmWUDwiuILu9AVph59Z0xNO2qlgZ6Ob2pzgLja_J7wM3FALzrxwtqHYTSwIzUdVBDkhWoZBYoaEmWUR2t5lqqlIehjQ5HwpuaS1qRhWAObyZqb6x4Z3efk5sS0BjLapVcAObqXya2YXYoUjLybvIsRugwTq2jysDnj-BBBbqWM03MTW7Vv7b6xd5IIuobj3P2SuQJyK33tqXt3ArK-FI5BNCfW0xCJLDupjFYOfZ98t36qDUUSMrz_exfdogYZpCBicKY7J9oYu59dCj8imitaIxC5SOm9PabDOJaNtQan_kKZf5LP7c_tjanDxx0l1eXLqn1JO44Y0BATzJ6aTwWG_MYgyCr5ym6uFENHJJfKBHqG0i-wBIskZjHeHg-PJqdDkmQS5FfwG8d7d23_SjhVziz7aiOkOLEVBOEFGdkKUltuhS_iPwCcFOU-cGTJLQYfWnQZMJg3t_5zKntty5A4XY93CCZO6kg8H-6KPRW2Ki6xxHm800Y0keJsKgGaywfx-DUYMaEHMmp4-sMIHkvZf5EeDRfxVU0EkgLqLn6aKRwJut0_YE32W8QTnTVgkzF3aFgYB8RZg56TfCtkwgjhu0IaZ4c_BE2Tp46AEU4jeijdA",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+</span>
+
+<span id="example-responses-GETapi-v1-recent-survey">
+            <blockquote>
+            <p>Example response (401, no token provided or token expired):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;Unauthenticated&quot;
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 50
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;survey_name&quot;: &quot;EMPLOYERS&rsquo; SURVEY  FOR LABOUR MARKET INFORMATION &quot;,
+            &quot;start_date&quot;: &quot;2021-09-24&quot;,
+            &quot;end_date&quot;: &quot;2021-11-24&quot;
+        },
+        {
+            &quot;id&quot;: 1,
+            &quot;survey_name&quot;: &quot;EMPLOYERS&rsquo; SURVEY  FOR LABOUR MARKET INFORMATION &quot;,
+            &quot;start_date&quot;: &quot;2021-09-24&quot;,
+            &quot;end_date&quot;: &quot;2021-11-24&quot;
+        },
+        {
+            &quot;id&quot;: 1,
+            &quot;survey_name&quot;: &quot;EMPLOYERS&rsquo; SURVEY  FOR LABOUR MARKET INFORMATION &quot;,
+            &quot;start_date&quot;: &quot;2021-09-24&quot;,
+            &quot;end_date&quot;: &quot;2021-11-24&quot;
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1-recent-survey" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1-recent-survey"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-recent-survey"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1-recent-survey" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1-recent-survey"></code></pre>
+</span>
+<form id="form-GETapi-v1-recent-survey" data-method="GET"
+      data-path="api/v1/recent-survey"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTgxMzYwYzUxMmViNTNhMDBkZDEyNGI2NzQwMjg0NDY4NzBkZTUyNWVkMDhiOGE0YjhhN2NhZGQ3MjVkYzQyZThmNzMwZDEzMjEwZDE2OWYiLCJpYXQiOjE2MzYzNjYyNDguMjM4OTUyLCJuYmYiOjE2MzYzNjYyNDguMjM4OTU1LCJleHAiOjE2Njc5MDIyNDguMjIxMDQyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.JOPUHZSws9mDsAvw3AVDeNHWtKGcGsOKpk1raZM4fkm02n4wD2yBfcUL2ZjbNmWUDwiuILu9AVph59Z0xNO2qlgZ6Ob2pzgLja_J7wM3FALzrxwtqHYTSwIzUdVBDkhWoZBYoaEmWUR2t5lqqlIehjQ5HwpuaS1qRhWAObyZqb6x4Z3efk5sS0BjLapVcAObqXya2YXYoUjLybvIsRugwTq2jysDnj-BBBbqWM03MTW7Vv7b6xd5IIuobj3P2SuQJyK33tqXt3ArK-FI5BNCfW0xCJLDupjFYOfZ98t36qDUUSMrz_exfdogYZpCBicKY7J9oYu59dCj8imitaIxC5SOm9PabDOJaNtQan_kKZf5LP7c_tjanDxx0l1eXLqn1JO44Y0BATzJ6aTwWG_MYgyCr5ym6uFENHJJfKBHqG0i-wBIskZjHeHg-PJqdDkmQS5FfwG8d7d23_SjhVziz7aiOkOLEVBOEFGdkKUltuhS_iPwCcFOU-cGTJLQYfWnQZMJg3t_5zKntty5A4XY93CCZO6kg8H-6KPRW2Ki6xxHm800Y0keJsKgGaywfx-DUYMaEHMmp4-sMIHkvZf5EeDRfxVU0EkgLqLn6aKRwJut0_YE32W8QTnTVgkzF3aFgYB8RZg56TfCtkwgjhu0IaZ4c_BE2Tp46AEU4jeijdA"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-recent-survey', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1-recent-survey"
+                    onclick="tryItOut('GETapi-v1-recent-survey');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1-recent-survey"
+                    onclick="cancelTryOut('GETapi-v1-recent-survey');" hidden>Cancel
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1-recent-survey" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/recent-survey</code></b>
+        </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-v1--id--organizations">Get Organizations .</h2>
+
+<p>
+</p>
+
+<p>This Api provides list of organization for particular survey Change bearer token according to user in header. Provide survey id in the route.</p>
+
+<span id="example-requests-GETapi-v1--id--organizations">
+<blockquote>Example request:</blockquote>
+
+
+<pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8001/api/v1/1/organizations" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTgxMzYwYzUxMmViNTNhMDBkZDEyNGI2NzQwMjg0NDY4NzBkZTUyNWVkMDhiOGE0YjhhN2NhZGQ3MjVkYzQyZThmNzMwZDEzMjEwZDE2OWYiLCJpYXQiOjE2MzYzNjYyNDguMjM4OTUyLCJuYmYiOjE2MzYzNjYyNDguMjM4OTU1LCJleHAiOjE2Njc5MDIyNDguMjIxMDQyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.JOPUHZSws9mDsAvw3AVDeNHWtKGcGsOKpk1raZM4fkm02n4wD2yBfcUL2ZjbNmWUDwiuILu9AVph59Z0xNO2qlgZ6Ob2pzgLja_J7wM3FALzrxwtqHYTSwIzUdVBDkhWoZBYoaEmWUR2t5lqqlIehjQ5HwpuaS1qRhWAObyZqb6x4Z3efk5sS0BjLapVcAObqXya2YXYoUjLybvIsRugwTq2jysDnj-BBBbqWM03MTW7Vv7b6xd5IIuobj3P2SuQJyK33tqXt3ArK-FI5BNCfW0xCJLDupjFYOfZ98t36qDUUSMrz_exfdogYZpCBicKY7J9oYu59dCj8imitaIxC5SOm9PabDOJaNtQan_kKZf5LP7c_tjanDxx0l1eXLqn1JO44Y0BATzJ6aTwWG_MYgyCr5ym6uFENHJJfKBHqG0i-wBIskZjHeHg-PJqdDkmQS5FfwG8d7d23_SjhVziz7aiOkOLEVBOEFGdkKUltuhS_iPwCcFOU-cGTJLQYfWnQZMJg3t_5zKntty5A4XY93CCZO6kg8H-6KPRW2Ki6xxHm800Y0keJsKgGaywfx-DUYMaEHMmp4-sMIHkvZf5EeDRfxVU0EkgLqLn6aKRwJut0_YE32W8QTnTVgkzF3aFgYB8RZg56TfCtkwgjhu0IaZ4c_BE2Tp46AEU4jeijdA"</code></pre>
+
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8001/api/v1/1/organizations"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTgxMzYwYzUxMmViNTNhMDBkZDEyNGI2NzQwMjg0NDY4NzBkZTUyNWVkMDhiOGE0YjhhN2NhZGQ3MjVkYzQyZThmNzMwZDEzMjEwZDE2OWYiLCJpYXQiOjE2MzYzNjYyNDguMjM4OTUyLCJuYmYiOjE2MzYzNjYyNDguMjM4OTU1LCJleHAiOjE2Njc5MDIyNDguMjIxMDQyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.JOPUHZSws9mDsAvw3AVDeNHWtKGcGsOKpk1raZM4fkm02n4wD2yBfcUL2ZjbNmWUDwiuILu9AVph59Z0xNO2qlgZ6Ob2pzgLja_J7wM3FALzrxwtqHYTSwIzUdVBDkhWoZBYoaEmWUR2t5lqqlIehjQ5HwpuaS1qRhWAObyZqb6x4Z3efk5sS0BjLapVcAObqXya2YXYoUjLybvIsRugwTq2jysDnj-BBBbqWM03MTW7Vv7b6xd5IIuobj3P2SuQJyK33tqXt3ArK-FI5BNCfW0xCJLDupjFYOfZ98t36qDUUSMrz_exfdogYZpCBicKY7J9oYu59dCj8imitaIxC5SOm9PabDOJaNtQan_kKZf5LP7c_tjanDxx0l1eXLqn1JO44Y0BATzJ6aTwWG_MYgyCr5ym6uFENHJJfKBHqG0i-wBIskZjHeHg-PJqdDkmQS5FfwG8d7d23_SjhVziz7aiOkOLEVBOEFGdkKUltuhS_iPwCcFOU-cGTJLQYfWnQZMJg3t_5zKntty5A4XY93CCZO6kg8H-6KPRW2Ki6xxHm800Y0keJsKgGaywfx-DUYMaEHMmp4-sMIHkvZf5EeDRfxVU0EkgLqLn6aKRwJut0_YE32W8QTnTVgkzF3aFgYB8RZg56TfCtkwgjhu0IaZ4c_BE2Tp46AEU4jeijdA",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+</span>
+
+<span id="example-responses-GETapi-v1--id--organizations">
+            <blockquote>
+            <p>Example response (401, no token provided or token expired):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;Unauthenticated&quot;
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 49
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;org_name&quot;: &quot;organization1&quot;,
+            &quot;phone_no&quot;: &quot;sdf&quot;,
+            &quot;establish_date&quot;: &quot;2021-10-27&quot;,
+            &quot;pivot_id&quot;: 1
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;org_name&quot;: &quot;Test Company&quot;,
+            &quot;phone_no&quot;: &quot;+9779848718802&quot;,
+            &quot;establish_date&quot;: &quot;2021-11-01&quot;,
+            &quot;pivot_id&quot;: 3
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;org_name&quot;: &quot;Young Minds&quot;,
+            &quot;phone_no&quot;: &quot;9779848718802&quot;,
+            &quot;establish_date&quot;: &quot;2021-11-23&quot;,
+            &quot;pivot_id&quot;: 4
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1--id--organizations" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1--id--organizations"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1--id--organizations"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1--id--organizations" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1--id--organizations"></code></pre>
+</span>
+<form id="form-GETapi-v1--id--organizations" data-method="GET"
+      data-path="api/v1/{id}/organizations"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTgxMzYwYzUxMmViNTNhMDBkZDEyNGI2NzQwMjg0NDY4NzBkZTUyNWVkMDhiOGE0YjhhN2NhZGQ3MjVkYzQyZThmNzMwZDEzMjEwZDE2OWYiLCJpYXQiOjE2MzYzNjYyNDguMjM4OTUyLCJuYmYiOjE2MzYzNjYyNDguMjM4OTU1LCJleHAiOjE2Njc5MDIyNDguMjIxMDQyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.JOPUHZSws9mDsAvw3AVDeNHWtKGcGsOKpk1raZM4fkm02n4wD2yBfcUL2ZjbNmWUDwiuILu9AVph59Z0xNO2qlgZ6Ob2pzgLja_J7wM3FALzrxwtqHYTSwIzUdVBDkhWoZBYoaEmWUR2t5lqqlIehjQ5HwpuaS1qRhWAObyZqb6x4Z3efk5sS0BjLapVcAObqXya2YXYoUjLybvIsRugwTq2jysDnj-BBBbqWM03MTW7Vv7b6xd5IIuobj3P2SuQJyK33tqXt3ArK-FI5BNCfW0xCJLDupjFYOfZ98t36qDUUSMrz_exfdogYZpCBicKY7J9oYu59dCj8imitaIxC5SOm9PabDOJaNtQan_kKZf5LP7c_tjanDxx0l1eXLqn1JO44Y0BATzJ6aTwWG_MYgyCr5ym6uFENHJJfKBHqG0i-wBIskZjHeHg-PJqdDkmQS5FfwG8d7d23_SjhVziz7aiOkOLEVBOEFGdkKUltuhS_iPwCcFOU-cGTJLQYfWnQZMJg3t_5zKntty5A4XY93CCZO6kg8H-6KPRW2Ki6xxHm800Y0keJsKgGaywfx-DUYMaEHMmp4-sMIHkvZf5EeDRfxVU0EkgLqLn6aKRwJut0_YE32W8QTnTVgkzF3aFgYB8RZg56TfCtkwgjhu0IaZ4c_BE2Tp46AEU4jeijdA"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1--id--organizations', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1--id--organizations"
+                    onclick="tryItOut('GETapi-v1--id--organizations');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1--id--organizations"
+                    onclick="cancelTryOut('GETapi-v1--id--organizations');" hidden>Cancel
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1--id--organizations" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/{id}/organizations</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="GETapi-v1--id--organizations"
+               value="1"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the survey.</p>
+            </p>
+                    </form>
+
+            <h2 id="endpoints-POSTapi-v1-start-survey">Start Survey .</h2>
+
+<p>
+</p>
+
+<p>This api start the survey.</p>
+
+<span id="example-requests-POSTapi-v1-start-survey">
+<blockquote>Example request:</blockquote>
+
+
+<pre><code class="language-bash">curl --request POST \
+    "http://localhost:8001/api/v1/start-survey" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTgxMzYwYzUxMmViNTNhMDBkZDEyNGI2NzQwMjg0NDY4NzBkZTUyNWVkMDhiOGE0YjhhN2NhZGQ3MjVkYzQyZThmNzMwZDEzMjEwZDE2OWYiLCJpYXQiOjE2MzYzNjYyNDguMjM4OTUyLCJuYmYiOjE2MzYzNjYyNDguMjM4OTU1LCJleHAiOjE2Njc5MDIyNDguMjIxMDQyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.JOPUHZSws9mDsAvw3AVDeNHWtKGcGsOKpk1raZM4fkm02n4wD2yBfcUL2ZjbNmWUDwiuILu9AVph59Z0xNO2qlgZ6Ob2pzgLja_J7wM3FALzrxwtqHYTSwIzUdVBDkhWoZBYoaEmWUR2t5lqqlIehjQ5HwpuaS1qRhWAObyZqb6x4Z3efk5sS0BjLapVcAObqXya2YXYoUjLybvIsRugwTq2jysDnj-BBBbqWM03MTW7Vv7b6xd5IIuobj3P2SuQJyK33tqXt3ArK-FI5BNCfW0xCJLDupjFYOfZ98t36qDUUSMrz_exfdogYZpCBicKY7J9oYu59dCj8imitaIxC5SOm9PabDOJaNtQan_kKZf5LP7c_tjanDxx0l1eXLqn1JO44Y0BATzJ6aTwWG_MYgyCr5ym6uFENHJJfKBHqG0i-wBIskZjHeHg-PJqdDkmQS5FfwG8d7d23_SjhVziz7aiOkOLEVBOEFGdkKUltuhS_iPwCcFOU-cGTJLQYfWnQZMJg3t_5zKntty5A4XY93CCZO6kg8H-6KPRW2Ki6xxHm800Y0keJsKgGaywfx-DUYMaEHMmp4-sMIHkvZf5EeDRfxVU0EkgLqLn6aKRwJut0_YE32W8QTnTVgkzF3aFgYB8RZg56TfCtkwgjhu0IaZ4c_BE2Tp46AEU4jeijdA" \
+    --data "{
+    \"pivot_id\": 1,
+    \"latitude\": \"officiis\",
+    \"longitude\": \"ipsum\"
+}"
+</code></pre>
+
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8001/api/v1/start-survey"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTgxMzYwYzUxMmViNTNhMDBkZDEyNGI2NzQwMjg0NDY4NzBkZTUyNWVkMDhiOGE0YjhhN2NhZGQ3MjVkYzQyZThmNzMwZDEzMjEwZDE2OWYiLCJpYXQiOjE2MzYzNjYyNDguMjM4OTUyLCJuYmYiOjE2MzYzNjYyNDguMjM4OTU1LCJleHAiOjE2Njc5MDIyNDguMjIxMDQyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.JOPUHZSws9mDsAvw3AVDeNHWtKGcGsOKpk1raZM4fkm02n4wD2yBfcUL2ZjbNmWUDwiuILu9AVph59Z0xNO2qlgZ6Ob2pzgLja_J7wM3FALzrxwtqHYTSwIzUdVBDkhWoZBYoaEmWUR2t5lqqlIehjQ5HwpuaS1qRhWAObyZqb6x4Z3efk5sS0BjLapVcAObqXya2YXYoUjLybvIsRugwTq2jysDnj-BBBbqWM03MTW7Vv7b6xd5IIuobj3P2SuQJyK33tqXt3ArK-FI5BNCfW0xCJLDupjFYOfZ98t36qDUUSMrz_exfdogYZpCBicKY7J9oYu59dCj8imitaIxC5SOm9PabDOJaNtQan_kKZf5LP7c_tjanDxx0l1eXLqn1JO44Y0BATzJ6aTwWG_MYgyCr5ym6uFENHJJfKBHqG0i-wBIskZjHeHg-PJqdDkmQS5FfwG8d7d23_SjhVziz7aiOkOLEVBOEFGdkKUltuhS_iPwCcFOU-cGTJLQYfWnQZMJg3t_5zKntty5A4XY93CCZO6kg8H-6KPRW2Ki6xxHm800Y0keJsKgGaywfx-DUYMaEHMmp4-sMIHkvZf5EeDRfxVU0EkgLqLn6aKRwJut0_YE32W8QTnTVgkzF3aFgYB8RZg56TfCtkwgjhu0IaZ4c_BE2Tp46AEU4jeijdA",
+};
+
+let body = {
+    "pivot_id": 1,
+    "latitude": "officiis",
+    "longitude": "ipsum"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre>
+</span>
+
+<span id="example-responses-POSTapi-v1-start-survey">
+            <blockquote>
+            <p>Example response (401, no token provided or token expired):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;Unauthenticated&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-v1-start-survey" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-v1-start-survey"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-v1-start-survey"></code></pre>
+</span>
+<span id="execution-error-POSTapi-v1-start-survey" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-v1-start-survey"></code></pre>
+</span>
+<form id="form-POSTapi-v1-start-survey" data-method="POST"
+      data-path="api/v1/start-survey"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTgxMzYwYzUxMmViNTNhMDBkZDEyNGI2NzQwMjg0NDY4NzBkZTUyNWVkMDhiOGE0YjhhN2NhZGQ3MjVkYzQyZThmNzMwZDEzMjEwZDE2OWYiLCJpYXQiOjE2MzYzNjYyNDguMjM4OTUyLCJuYmYiOjE2MzYzNjYyNDguMjM4OTU1LCJleHAiOjE2Njc5MDIyNDguMjIxMDQyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.JOPUHZSws9mDsAvw3AVDeNHWtKGcGsOKpk1raZM4fkm02n4wD2yBfcUL2ZjbNmWUDwiuILu9AVph59Z0xNO2qlgZ6Ob2pzgLja_J7wM3FALzrxwtqHYTSwIzUdVBDkhWoZBYoaEmWUR2t5lqqlIehjQ5HwpuaS1qRhWAObyZqb6x4Z3efk5sS0BjLapVcAObqXya2YXYoUjLybvIsRugwTq2jysDnj-BBBbqWM03MTW7Vv7b6xd5IIuobj3P2SuQJyK33tqXt3ArK-FI5BNCfW0xCJLDupjFYOfZ98t36qDUUSMrz_exfdogYZpCBicKY7J9oYu59dCj8imitaIxC5SOm9PabDOJaNtQan_kKZf5LP7c_tjanDxx0l1eXLqn1JO44Y0BATzJ6aTwWG_MYgyCr5ym6uFENHJJfKBHqG0i-wBIskZjHeHg-PJqdDkmQS5FfwG8d7d23_SjhVziz7aiOkOLEVBOEFGdkKUltuhS_iPwCcFOU-cGTJLQYfWnQZMJg3t_5zKntty5A4XY93CCZO6kg8H-6KPRW2Ki6xxHm800Y0keJsKgGaywfx-DUYMaEHMmp4-sMIHkvZf5EeDRfxVU0EkgLqLn6aKRwJut0_YE32W8QTnTVgkzF3aFgYB8RZg56TfCtkwgjhu0IaZ4c_BE2Tp46AEU4jeijdA"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-v1-start-survey', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-v1-start-survey"
+                    onclick="tryItOut('POSTapi-v1-start-survey');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-v1-start-survey"
+                    onclick="cancelTryOut('POSTapi-v1-start-survey');" hidden>Cancel
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-v1-start-survey" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/v1/start-survey</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>pivot_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="pivot_id"
+               data-endpoint="POSTapi-v1-start-survey"
+               value="1"
+               data-component="body" hidden>
+    <br>
+<p>Pivot id.</p>
+        </p>
+                <p>
+            <b><code>latitude</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="latitude"
+               data-endpoint="POSTapi-v1-start-survey"
+               value="officiis"
+               data-component="body" hidden>
+    <br>
+<p>The latitude of the mobile location.</p>
+        </p>
+                <p>
+            <b><code>longitude</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="longitude"
+               data-endpoint="POSTapi-v1-start-survey"
+               value="ipsum"
+               data-component="body" hidden>
+    <br>
+<p>The longitude of the mobile location.</p>
+        </p>
+        </form>
+
+            <h2 id="endpoints-GETapi-v1-me">GET api/v1/me</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-v1-me">
+<blockquote>Example request:</blockquote>
+
+
+<pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8001/api/v1/me" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre>
+
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8001/api/v1/me"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+</span>
+
+<span id="example-responses-GETapi-v1-me">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 48
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;data&quot;: {
+        &quot;id&quot;: 1,
+        &quot;org_name&quot;: null,
+        &quot;pradesh&quot;: {
+            &quot;id&quot;: 2,
+            &quot;pradesh_name&quot;: &quot;Pradesh-2&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: null,
+            &quot;updated_at&quot;: null
+        },
+        &quot;district&quot;: {
+            &quot;id&quot;: 16,
+            &quot;pradesh_id&quot;: 2,
+            &quot;district_code&quot;: &quot;16&quot;,
+            &quot;nepali_name&quot;: &quot;सिरहा&quot;,
+            &quot;english_name&quot;: &quot;Siraha&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: null,
+            &quot;updated_at&quot;: &quot;2018-01-24T02:59:19.000000Z&quot;
+        },
+        &quot;muni&quot;: {
+            &quot;id&quot;: 156,
+            &quot;muni_type_id&quot;: 3,
+            &quot;district_id&quot;: 16,
+            &quot;muni_code&quot;: &quot;156&quot;,
+            &quot;muni_name&quot;: &quot;लहान नगरपालिका&quot;,
+            &quot;muni_name_en&quot;: null,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: null,
+            &quot;updated_at&quot;: null
+        },
+        &quot;ward_no&quot;: 14,
+        &quot;phone_no&quot;: &quot;9874125632&quot;,
+        &quot;email&quot;: &quot;enumerator@gmail.com&quot;,
+        &quot;fax&quot;: null,
+        &quot;website&quot;: null,
+        &quot;establish_date&quot;: null
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1-me" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1-me"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-me"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1-me" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1-me"></code></pre>
+</span>
+<form id="form-GETapi-v1-me" data-method="GET"
+      data-path="api/v1/me"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-me', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1-me"
+                    onclick="tryItOut('GETapi-v1-me');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1-me"
+                    onclick="cancelTryOut('GETapi-v1-me');" hidden>Cancel
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1-me" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/me</code></b>
+        </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-v1-pradesh">GET api/v1/pradesh</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-v1-pradesh">
+<blockquote>Example request:</blockquote>
+
+
+<pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8001/api/v1/pradesh" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre>
+
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8001/api/v1/pradesh"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+</span>
+
+<span id="example-responses-GETapi-v1-pradesh">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 47
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;pradesh_name&quot;: &quot;Pradesh-1&quot;
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;pradesh_name&quot;: &quot;Pradesh-2&quot;
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;pradesh_name&quot;: &quot;Pradesh-3&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;pradesh_name&quot;: &quot;Pradesh-4&quot;
+        },
+        {
+            &quot;id&quot;: 5,
+            &quot;pradesh_name&quot;: &quot;Pradesh-5&quot;
+        },
+        {
+            &quot;id&quot;: 6,
+            &quot;pradesh_name&quot;: &quot;Pradesh-6&quot;
+        },
+        {
+            &quot;id&quot;: 7,
+            &quot;pradesh_name&quot;: &quot;Pradesh-7&quot;
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1-pradesh" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1-pradesh"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-pradesh"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1-pradesh" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1-pradesh"></code></pre>
+</span>
+<form id="form-GETapi-v1-pradesh" data-method="GET"
+      data-path="api/v1/pradesh"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-pradesh', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1-pradesh"
+                    onclick="tryItOut('GETapi-v1-pradesh');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1-pradesh"
+                    onclick="cancelTryOut('GETapi-v1-pradesh');" hidden>Cancel
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1-pradesh" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/pradesh</code></b>
+        </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-v1-district--id-">GET api/v1/district/{id}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-v1-district--id-">
+<blockquote>Example request:</blockquote>
+
+
+<pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8001/api/v1/district/suscipit" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre>
+
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8001/api/v1/district/suscipit"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+</span>
+
+<span id="example-responses-GETapi-v1-district--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">content-type: text/html; charset=UTF-8
+cache-control: no-cache, private
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 46
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json"></code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1-district--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1-district--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-district--id-"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1-district--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1-district--id-"></code></pre>
+</span>
+<form id="form-GETapi-v1-district--id-" data-method="GET"
+      data-path="api/v1/district/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-district--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1-district--id-"
+                    onclick="tryItOut('GETapi-v1-district--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1-district--id-"
+                    onclick="cancelTryOut('GETapi-v1-district--id-');" hidden>Cancel
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1-district--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/district/{id}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="id"
+               data-endpoint="GETapi-v1-district--id-"
+               value="suscipit"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the district.</p>
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-v1-municipality--id-">GET api/v1/municipality/{id}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-v1-municipality--id-">
+<blockquote>Example request:</blockquote>
+
+
+<pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8001/api/v1/municipality/vel" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre>
+
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8001/api/v1/municipality/vel"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+</span>
+
+<span id="example-responses-GETapi-v1-municipality--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">content-type: text/html; charset=UTF-8
+cache-control: no-cache, private
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 45
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json"></code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1-municipality--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1-municipality--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-municipality--id-"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1-municipality--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1-municipality--id-"></code></pre>
+</span>
+<form id="form-GETapi-v1-municipality--id-" data-method="GET"
+      data-path="api/v1/municipality/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-municipality--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1-municipality--id-"
+                    onclick="tryItOut('GETapi-v1-municipality--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1-municipality--id-"
+                    onclick="cancelTryOut('GETapi-v1-municipality--id-');" hidden>Cancel
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1-municipality--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/municipality/{id}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="id"
+               data-endpoint="GETapi-v1-municipality--id-"
+               value="vel"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the municipality.</p>
+            </p>
+                    </form>
+
+            <h2 id="endpoints-POSTapi-v1-update-profile">POST api/v1/update/profile</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-v1-update-profile">
+<blockquote>Example request:</blockquote>
+
+
+<pre><code class="language-bash">curl --request POST \
+    "http://localhost:8001/api/v1/update/profile" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre>
+
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8001/api/v1/update/profile"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+</span>
+
+<span id="example-responses-POSTapi-v1-update-profile">
+</span>
+<span id="execution-results-POSTapi-v1-update-profile" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-v1-update-profile"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-v1-update-profile"></code></pre>
+</span>
+<span id="execution-error-POSTapi-v1-update-profile" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-v1-update-profile"></code></pre>
+</span>
+<form id="form-POSTapi-v1-update-profile" data-method="POST"
+      data-path="api/v1/update/profile"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-v1-update-profile', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-v1-update-profile"
+                    onclick="tryItOut('POSTapi-v1-update-profile');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-v1-update-profile"
+                    onclick="cancelTryOut('POSTapi-v1-update-profile');" hidden>Cancel
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-v1-update-profile" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/v1/update/profile</code></b>
+        </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-v1--id--questions--pivot_id-">Get Questions.</h2>
+
+<p>
+</p>
+
+<p>This Api provides list of questions along with ansewer (if already answered i.e edit answers). Provide survey_id and pivot_id in the route.
+There are 8 types of questions (input, checkbox, radio, multiple_input,cond_radio, sector, external_table, sub_qsn)</p>
+
+<span id="example-requests-GETapi-v1--id--questions--pivot_id-">
+<blockquote>Example request:</blockquote>
+
+
+<pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8001/api/v1/1/questions/1" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTgxMzYwYzUxMmViNTNhMDBkZDEyNGI2NzQwMjg0NDY4NzBkZTUyNWVkMDhiOGE0YjhhN2NhZGQ3MjVkYzQyZThmNzMwZDEzMjEwZDE2OWYiLCJpYXQiOjE2MzYzNjYyNDguMjM4OTUyLCJuYmYiOjE2MzYzNjYyNDguMjM4OTU1LCJleHAiOjE2Njc5MDIyNDguMjIxMDQyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.JOPUHZSws9mDsAvw3AVDeNHWtKGcGsOKpk1raZM4fkm02n4wD2yBfcUL2ZjbNmWUDwiuILu9AVph59Z0xNO2qlgZ6Ob2pzgLja_J7wM3FALzrxwtqHYTSwIzUdVBDkhWoZBYoaEmWUR2t5lqqlIehjQ5HwpuaS1qRhWAObyZqb6x4Z3efk5sS0BjLapVcAObqXya2YXYoUjLybvIsRugwTq2jysDnj-BBBbqWM03MTW7Vv7b6xd5IIuobj3P2SuQJyK33tqXt3ArK-FI5BNCfW0xCJLDupjFYOfZ98t36qDUUSMrz_exfdogYZpCBicKY7J9oYu59dCj8imitaIxC5SOm9PabDOJaNtQan_kKZf5LP7c_tjanDxx0l1eXLqn1JO44Y0BATzJ6aTwWG_MYgyCr5ym6uFENHJJfKBHqG0i-wBIskZjHeHg-PJqdDkmQS5FfwG8d7d23_SjhVziz7aiOkOLEVBOEFGdkKUltuhS_iPwCcFOU-cGTJLQYfWnQZMJg3t_5zKntty5A4XY93CCZO6kg8H-6KPRW2Ki6xxHm800Y0keJsKgGaywfx-DUYMaEHMmp4-sMIHkvZf5EeDRfxVU0EkgLqLn6aKRwJut0_YE32W8QTnTVgkzF3aFgYB8RZg56TfCtkwgjhu0IaZ4c_BE2Tp46AEU4jeijdA"</code></pre>
+
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8001/api/v1/1/questions/1"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTgxMzYwYzUxMmViNTNhMDBkZDEyNGI2NzQwMjg0NDY4NzBkZTUyNWVkMDhiOGE0YjhhN2NhZGQ3MjVkYzQyZThmNzMwZDEzMjEwZDE2OWYiLCJpYXQiOjE2MzYzNjYyNDguMjM4OTUyLCJuYmYiOjE2MzYzNjYyNDguMjM4OTU1LCJleHAiOjE2Njc5MDIyNDguMjIxMDQyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.JOPUHZSws9mDsAvw3AVDeNHWtKGcGsOKpk1raZM4fkm02n4wD2yBfcUL2ZjbNmWUDwiuILu9AVph59Z0xNO2qlgZ6Ob2pzgLja_J7wM3FALzrxwtqHYTSwIzUdVBDkhWoZBYoaEmWUR2t5lqqlIehjQ5HwpuaS1qRhWAObyZqb6x4Z3efk5sS0BjLapVcAObqXya2YXYoUjLybvIsRugwTq2jysDnj-BBBbqWM03MTW7Vv7b6xd5IIuobj3P2SuQJyK33tqXt3ArK-FI5BNCfW0xCJLDupjFYOfZ98t36qDUUSMrz_exfdogYZpCBicKY7J9oYu59dCj8imitaIxC5SOm9PabDOJaNtQan_kKZf5LP7c_tjanDxx0l1eXLqn1JO44Y0BATzJ6aTwWG_MYgyCr5ym6uFENHJJfKBHqG0i-wBIskZjHeHg-PJqdDkmQS5FfwG8d7d23_SjhVziz7aiOkOLEVBOEFGdkKUltuhS_iPwCcFOU-cGTJLQYfWnQZMJg3t_5zKntty5A4XY93CCZO6kg8H-6KPRW2Ki6xxHm800Y0keJsKgGaywfx-DUYMaEHMmp4-sMIHkvZf5EeDRfxVU0EkgLqLn6aKRwJut0_YE32W8QTnTVgkzF3aFgYB8RZg56TfCtkwgjhu0IaZ4c_BE2Tp46AEU4jeijdA",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+</span>
+
+<span id="example-responses-GETapi-v1--id--questions--pivot_id-">
+            <blockquote>
+            <p>Example response (401, no token provided or token expired):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;Unauthenticated&quot;
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 44
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;qsn_number&quot;: &quot;1.1&quot;,
+            &quot;qsn_name&quot;: &quot;Name of Executive Officer&quot;,
+            &quot;ans_type&quot;: &quot;input&quot;,
+            &quot;qsn_status&quot;: &quot;active&quot;,
+            &quot;required&quot;: &quot;yes&quot;,
+            &quot;instruction&quot;: null,
+            &quot;answer&quot;: [
+                {
+                    &quot;id&quot;: 1,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;qsn_id&quot;: 1,
+                    &quot;answer&quot;: &quot;hyffgfghfg&quot;,
+                    &quot;qsn_opt_id&quot;: null,
+                    &quot;other_answer&quot;: null,
+                    &quot;other_values&quot;: null,
+                    &quot;created_at&quot;: &quot;2021-10-27T06:03:37.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-10-27T06:03:37.000000Z&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;qsn_number&quot;: &quot;1.2&quot;,
+            &quot;qsn_name&quot;: &quot;Name of HR officer (If applicable):&quot;,
+            &quot;ans_type&quot;: &quot;input&quot;,
+            &quot;qsn_status&quot;: &quot;active&quot;,
+            &quot;required&quot;: &quot;yes&quot;,
+            &quot;instruction&quot;: null,
+            &quot;answer&quot;: [
+                {
+                    &quot;id&quot;: 2,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;qsn_id&quot;: 2,
+                    &quot;answer&quot;: &quot;hgg&quot;,
+                    &quot;qsn_opt_id&quot;: null,
+                    &quot;other_answer&quot;: null,
+                    &quot;other_values&quot;: null,
+                    &quot;created_at&quot;: &quot;2021-10-27T06:03:45.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-10-27T06:03:45.000000Z&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;qsn_number&quot;: &quot;1.3&quot;,
+            &quot;qsn_name&quot;: &quot;Registered with&quot;,
+            &quot;ans_type&quot;: &quot;checkbox&quot;,
+            &quot;qsn_status&quot;: &quot;active&quot;,
+            &quot;required&quot;: &quot;yes&quot;,
+            &quot;instruction&quot;: null,
+            &quot;question_options&quot;: [
+                {
+                    &quot;id&quot;: 1,
+                    &quot;qsn_id&quot;: 3,
+                    &quot;option_number&quot;: &quot;a&quot;,
+                    &quot;option_name&quot;: &quot;Office of Company Register&quot;,
+                    &quot;option_order&quot;: 1,
+                    &quot;option_type&quot;: &quot;checkbox&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 2,
+                    &quot;qsn_id&quot;: 3,
+                    &quot;option_number&quot;: &quot;b&quot;,
+                    &quot;option_name&quot;: &quot;Cottage and Small Industry Office&quot;,
+                    &quot;option_order&quot;: 2,
+                    &quot;option_type&quot;: &quot;checkbox&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 3,
+                    &quot;qsn_id&quot;: 3,
+                    &quot;option_number&quot;: &quot;c&quot;,
+                    &quot;option_name&quot;: &quot;Department of Industry&quot;,
+                    &quot;option_order&quot;: 3,
+                    &quot;option_type&quot;: &quot;checkbox&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 4,
+                    &quot;qsn_id&quot;: 3,
+                    &quot;option_number&quot;: &quot;d&quot;,
+                    &quot;option_name&quot;: &quot;Local Government (Municipality/R. Municipality)&quot;,
+                    &quot;option_order&quot;: 4,
+                    &quot;option_type&quot;: &quot;checkbox&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 5,
+                    &quot;qsn_id&quot;: 3,
+                    &quot;option_number&quot;: &quot;e&quot;,
+                    &quot;option_name&quot;: &quot;District Coordination Committee&quot;,
+                    &quot;option_order&quot;: 5,
+                    &quot;option_type&quot;: &quot;checkbox&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 6,
+                    &quot;qsn_id&quot;: 3,
+                    &quot;option_number&quot;: &quot;f&quot;,
+                    &quot;option_name&quot;: &quot;Others&quot;,
+                    &quot;option_order&quot;: 6,
+                    &quot;option_type&quot;: &quot;others&quot;,
+                    &quot;options&quot;: null
+                }
+            ],
+            &quot;answer&quot;: [
+                {
+                    &quot;id&quot;: 3,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;qsn_id&quot;: 3,
+                    &quot;answer&quot;: &quot;1,6&quot;,
+                    &quot;qsn_opt_id&quot;: null,
+                    &quot;other_answer&quot;: &quot;fghfghytyty&quot;,
+                    &quot;other_values&quot;: null,
+                    &quot;created_at&quot;: &quot;2021-10-27T06:04:08.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-10-27T06:04:08.000000Z&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;qsn_number&quot;: &quot;1.4&quot;,
+            &quot;qsn_name&quot;: &quot;Types of Enterprises&quot;,
+            &quot;ans_type&quot;: &quot;radio&quot;,
+            &quot;qsn_status&quot;: &quot;active&quot;,
+            &quot;required&quot;: &quot;yes&quot;,
+            &quot;instruction&quot;: null,
+            &quot;question_options&quot;: [
+                {
+                    &quot;id&quot;: 7,
+                    &quot;qsn_id&quot;: 4,
+                    &quot;option_number&quot;: &quot;a&quot;,
+                    &quot;option_name&quot;: &quot;Individual Proprietor&quot;,
+                    &quot;option_order&quot;: 1,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 8,
+                    &quot;qsn_id&quot;: 4,
+                    &quot;option_number&quot;: &quot;b&quot;,
+                    &quot;option_name&quot;: &quot;Partnership&quot;,
+                    &quot;option_order&quot;: 2,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 9,
+                    &quot;qsn_id&quot;: 4,
+                    &quot;option_number&quot;: &quot;c&quot;,
+                    &quot;option_name&quot;: &quot;Public Limited Company&quot;,
+                    &quot;option_order&quot;: 3,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 10,
+                    &quot;qsn_id&quot;: 4,
+                    &quot;option_number&quot;: &quot;d&quot;,
+                    &quot;option_name&quot;: &quot;State owned enterprises&quot;,
+                    &quot;option_order&quot;: 4,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                }
+            ],
+            &quot;answer&quot;: [
+                {
+                    &quot;id&quot;: 4,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;qsn_id&quot;: 4,
+                    &quot;answer&quot;: null,
+                    &quot;qsn_opt_id&quot;: 7,
+                    &quot;other_answer&quot;: null,
+                    &quot;other_values&quot;: null,
+                    &quot;created_at&quot;: &quot;2021-10-27T06:04:17.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-10-27T06:04:17.000000Z&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 5,
+            &quot;qsn_number&quot;: &quot;1.5&quot;,
+            &quot;qsn_name&quot;: &quot;Number of partners/ Shareholders&quot;,
+            &quot;ans_type&quot;: &quot;input&quot;,
+            &quot;qsn_status&quot;: &quot;active&quot;,
+            &quot;required&quot;: &quot;yes&quot;,
+            &quot;instruction&quot;: null,
+            &quot;answer&quot;: [
+                {
+                    &quot;id&quot;: 5,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;qsn_id&quot;: 5,
+                    &quot;answer&quot;: &quot;jhgtyu&quot;,
+                    &quot;qsn_opt_id&quot;: null,
+                    &quot;other_answer&quot;: null,
+                    &quot;other_values&quot;: null,
+                    &quot;created_at&quot;: &quot;2021-10-27T06:04:21.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-10-27T06:04:21.000000Z&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 6,
+            &quot;qsn_number&quot;: &quot;1.6&quot;,
+            &quot;qsn_name&quot;: &quot;Scale of enterprise other than FCAN member organisations:&quot;,
+            &quot;ans_type&quot;: &quot;radio&quot;,
+            &quot;qsn_status&quot;: &quot;active&quot;,
+            &quot;required&quot;: &quot;yes&quot;,
+            &quot;instruction&quot;: null,
+            &quot;question_options&quot;: [
+                {
+                    &quot;id&quot;: 11,
+                    &quot;qsn_id&quot;: 6,
+                    &quot;option_number&quot;: &quot;a&quot;,
+                    &quot;option_name&quot;: &quot;Micro/Cottage&quot;,
+                    &quot;option_order&quot;: 1,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 12,
+                    &quot;qsn_id&quot;: 6,
+                    &quot;option_number&quot;: &quot;b&quot;,
+                    &quot;option_name&quot;: &quot;Small&quot;,
+                    &quot;option_order&quot;: 2,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 13,
+                    &quot;qsn_id&quot;: 6,
+                    &quot;option_number&quot;: &quot;c&quot;,
+                    &quot;option_name&quot;: &quot;Medium&quot;,
+                    &quot;option_order&quot;: 3,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 14,
+                    &quot;qsn_id&quot;: 6,
+                    &quot;option_number&quot;: &quot;d&quot;,
+                    &quot;option_name&quot;: &quot;Large&quot;,
+                    &quot;option_order&quot;: 4,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                }
+            ],
+            &quot;answer&quot;: [
+                {
+                    &quot;id&quot;: 6,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;qsn_id&quot;: 6,
+                    &quot;answer&quot;: null,
+                    &quot;qsn_opt_id&quot;: 13,
+                    &quot;other_answer&quot;: null,
+                    &quot;other_values&quot;: null,
+                    &quot;created_at&quot;: &quot;2021-10-27T06:04:32.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-10-27T06:04:32.000000Z&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 7,
+            &quot;qsn_number&quot;: &quot;1.7&quot;,
+            &quot;qsn_name&quot;: &quot;Applies only for FCAN member organisations&quot;,
+            &quot;ans_type&quot;: &quot;radio&quot;,
+            &quot;qsn_status&quot;: &quot;active&quot;,
+            &quot;required&quot;: &quot;no&quot;,
+            &quot;instruction&quot;: null,
+            &quot;question_options&quot;: [
+                {
+                    &quot;id&quot;: 15,
+                    &quot;qsn_id&quot;: 7,
+                    &quot;option_number&quot;: &quot;1&quot;,
+                    &quot;option_name&quot;: &quot;A&quot;,
+                    &quot;option_order&quot;: 1,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 16,
+                    &quot;qsn_id&quot;: 7,
+                    &quot;option_number&quot;: &quot;2&quot;,
+                    &quot;option_name&quot;: &quot;B&quot;,
+                    &quot;option_order&quot;: 2,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 17,
+                    &quot;qsn_id&quot;: 7,
+                    &quot;option_number&quot;: &quot;3&quot;,
+                    &quot;option_name&quot;: &quot;C&quot;,
+                    &quot;option_order&quot;: 3,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 18,
+                    &quot;qsn_id&quot;: 7,
+                    &quot;option_number&quot;: &quot;4&quot;,
+                    &quot;option_name&quot;: &quot;D&quot;,
+                    &quot;option_order&quot;: 4,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                }
+            ],
+            &quot;answer&quot;: [
+                {
+                    &quot;id&quot;: 7,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;qsn_id&quot;: 7,
+                    &quot;answer&quot;: null,
+                    &quot;qsn_opt_id&quot;: 17,
+                    &quot;other_answer&quot;: null,
+                    &quot;other_values&quot;: null,
+                    &quot;created_at&quot;: &quot;2021-10-27T06:04:42.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-10-27T06:04:42.000000Z&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 8,
+            &quot;qsn_number&quot;: &quot;2&quot;,
+            &quot;qsn_name&quot;: &quot;Membership with Associated Federation&quot;,
+            &quot;ans_type&quot;: &quot;sub_qsn&quot;,
+            &quot;qsn_status&quot;: &quot;active&quot;,
+            &quot;required&quot;: &quot;yes&quot;,
+            &quot;instruction&quot;: null,
+            &quot;sub_questions&quot;: [
+                {
+                    &quot;id&quot;: 9,
+                    &quot;parent_id&quot;: 8,
+                    &quot;qsn_number&quot;: &quot;2.1&quot;,
+                    &quot;qsn_name&quot;: &quot;FNCCI&quot;,
+                    &quot;ans_type&quot;: &quot;multiple_input&quot;,
+                    &quot;qst_status&quot;: &quot;active&quot;,
+                    &quot;required&quot;: &quot;yes&quot;,
+                    &quot;instruction&quot;: null,
+                    &quot;qsn_modify&quot;: &quot;yes&quot;,
+                    &quot;qsn_order&quot;: 9,
+                    &quot;created_at&quot;: &quot;2021-10-26T09:05:37.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-10-26T09:05:37.000000Z&quot;,
+                    &quot;answer&quot;: [
+                        {
+                            &quot;id&quot;: 8,
+                            &quot;enumerator_assign_id&quot;: 1,
+                            &quot;qsn_id&quot;: 9,
+                            &quot;answer&quot;: {
+                                &quot;19&quot;: &quot;2021&quot;,
+                                &quot;20&quot;: &quot;jan&quot;
+                            },
+                            &quot;qsn_opt_id&quot;: null,
+                            &quot;other_answer&quot;: null,
+                            &quot;other_values&quot;: null,
+                            &quot;created_at&quot;: &quot;2021-10-27T06:05:30.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2021-10-27T06:05:30.000000Z&quot;
+                        }
+                    ],
+                    &quot;question_option&quot;: [
+                        {
+                            &quot;id&quot;: 19,
+                            &quot;parent_id&quot;: 0,
+                            &quot;qsn_id&quot;: 9,
+                            &quot;option_number&quot;: &quot;1&quot;,
+                            &quot;option_name&quot;: &quot;Year&quot;,
+                            &quot;option_order&quot;: 1,
+                            &quot;option_type&quot;: &quot;input&quot;,
+                            &quot;options&quot;: null,
+                            &quot;remarks&quot;: null,
+                            &quot;created_at&quot;: &quot;2021-10-26T09:05:38.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2021-10-26T09:05:38.000000Z&quot;
+                        },
+                        {
+                            &quot;id&quot;: 20,
+                            &quot;parent_id&quot;: 0,
+                            &quot;qsn_id&quot;: 9,
+                            &quot;option_number&quot;: &quot;2&quot;,
+                            &quot;option_name&quot;: &quot;Month&quot;,
+                            &quot;option_order&quot;: 2,
+                            &quot;option_type&quot;: &quot;input&quot;,
+                            &quot;options&quot;: null,
+                            &quot;remarks&quot;: null,
+                            &quot;created_at&quot;: &quot;2021-10-26T09:05:38.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2021-10-26T09:05:38.000000Z&quot;
+                        }
+                    ]
+                },
+                {
+                    &quot;id&quot;: 10,
+                    &quot;parent_id&quot;: 8,
+                    &quot;qsn_number&quot;: &quot;2.2&quot;,
+                    &quot;qsn_name&quot;: &quot;FNCSI&quot;,
+                    &quot;ans_type&quot;: &quot;multiple_input&quot;,
+                    &quot;qst_status&quot;: &quot;active&quot;,
+                    &quot;required&quot;: &quot;yes&quot;,
+                    &quot;instruction&quot;: null,
+                    &quot;qsn_modify&quot;: &quot;yes&quot;,
+                    &quot;qsn_order&quot;: 10,
+                    &quot;created_at&quot;: &quot;2021-10-26T09:06:15.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-10-26T09:06:15.000000Z&quot;,
+                    &quot;answer&quot;: [
+                        {
+                            &quot;id&quot;: 9,
+                            &quot;enumerator_assign_id&quot;: 1,
+                            &quot;qsn_id&quot;: 10,
+                            &quot;answer&quot;: {
+                                &quot;21&quot;: null,
+                                &quot;22&quot;: null
+                            },
+                            &quot;qsn_opt_id&quot;: null,
+                            &quot;other_answer&quot;: null,
+                            &quot;other_values&quot;: null,
+                            &quot;created_at&quot;: &quot;2021-10-27T06:05:30.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2021-10-27T06:05:30.000000Z&quot;
+                        }
+                    ],
+                    &quot;question_option&quot;: [
+                        {
+                            &quot;id&quot;: 21,
+                            &quot;parent_id&quot;: 0,
+                            &quot;qsn_id&quot;: 10,
+                            &quot;option_number&quot;: &quot;1&quot;,
+                            &quot;option_name&quot;: &quot;Year&quot;,
+                            &quot;option_order&quot;: 1,
+                            &quot;option_type&quot;: &quot;input&quot;,
+                            &quot;options&quot;: null,
+                            &quot;remarks&quot;: null,
+                            &quot;created_at&quot;: &quot;2021-10-26T09:06:15.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2021-10-26T09:06:15.000000Z&quot;
+                        },
+                        {
+                            &quot;id&quot;: 22,
+                            &quot;parent_id&quot;: 0,
+                            &quot;qsn_id&quot;: 10,
+                            &quot;option_number&quot;: &quot;2&quot;,
+                            &quot;option_name&quot;: &quot;Month&quot;,
+                            &quot;option_order&quot;: 2,
+                            &quot;option_type&quot;: &quot;input&quot;,
+                            &quot;options&quot;: null,
+                            &quot;remarks&quot;: null,
+                            &quot;created_at&quot;: &quot;2021-10-26T09:06:15.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2021-10-26T09:06:15.000000Z&quot;
+                        }
+                    ]
+                },
+                {
+                    &quot;id&quot;: 11,
+                    &quot;parent_id&quot;: 8,
+                    &quot;qsn_number&quot;: &quot;2.3&quot;,
+                    &quot;qsn_name&quot;: &quot;CNI&quot;,
+                    &quot;ans_type&quot;: &quot;multiple_input&quot;,
+                    &quot;qst_status&quot;: &quot;active&quot;,
+                    &quot;required&quot;: &quot;yes&quot;,
+                    &quot;instruction&quot;: null,
+                    &quot;qsn_modify&quot;: &quot;yes&quot;,
+                    &quot;qsn_order&quot;: 11,
+                    &quot;created_at&quot;: &quot;2021-10-26T09:07:12.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-10-26T09:07:12.000000Z&quot;,
+                    &quot;answer&quot;: [
+                        {
+                            &quot;id&quot;: 10,
+                            &quot;enumerator_assign_id&quot;: 1,
+                            &quot;qsn_id&quot;: 11,
+                            &quot;answer&quot;: {
+                                &quot;23&quot;: null,
+                                &quot;24&quot;: null
+                            },
+                            &quot;qsn_opt_id&quot;: null,
+                            &quot;other_answer&quot;: null,
+                            &quot;other_values&quot;: null,
+                            &quot;created_at&quot;: &quot;2021-10-27T06:05:30.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2021-10-27T06:05:30.000000Z&quot;
+                        }
+                    ],
+                    &quot;question_option&quot;: [
+                        {
+                            &quot;id&quot;: 23,
+                            &quot;parent_id&quot;: 0,
+                            &quot;qsn_id&quot;: 11,
+                            &quot;option_number&quot;: &quot;1&quot;,
+                            &quot;option_name&quot;: &quot;Year&quot;,
+                            &quot;option_order&quot;: 1,
+                            &quot;option_type&quot;: &quot;input&quot;,
+                            &quot;options&quot;: null,
+                            &quot;remarks&quot;: null,
+                            &quot;created_at&quot;: &quot;2021-10-26T09:07:12.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2021-10-26T09:07:12.000000Z&quot;
+                        },
+                        {
+                            &quot;id&quot;: 24,
+                            &quot;parent_id&quot;: 0,
+                            &quot;qsn_id&quot;: 11,
+                            &quot;option_number&quot;: &quot;2&quot;,
+                            &quot;option_name&quot;: &quot;Month&quot;,
+                            &quot;option_order&quot;: 2,
+                            &quot;option_type&quot;: &quot;input&quot;,
+                            &quot;options&quot;: null,
+                            &quot;remarks&quot;: null,
+                            &quot;created_at&quot;: &quot;2021-10-26T09:07:12.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2021-10-26T09:07:12.000000Z&quot;
+                        }
+                    ]
+                },
+                {
+                    &quot;id&quot;: 12,
+                    &quot;parent_id&quot;: 8,
+                    &quot;qsn_number&quot;: &quot;2.4&quot;,
+                    &quot;qsn_name&quot;: &quot;FCAN&quot;,
+                    &quot;ans_type&quot;: &quot;multiple_input&quot;,
+                    &quot;qst_status&quot;: &quot;active&quot;,
+                    &quot;required&quot;: &quot;yes&quot;,
+                    &quot;instruction&quot;: null,
+                    &quot;qsn_modify&quot;: &quot;yes&quot;,
+                    &quot;qsn_order&quot;: 12,
+                    &quot;created_at&quot;: &quot;2021-10-26T09:07:49.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-10-26T09:07:49.000000Z&quot;,
+                    &quot;answer&quot;: [
+                        {
+                            &quot;id&quot;: 11,
+                            &quot;enumerator_assign_id&quot;: 1,
+                            &quot;qsn_id&quot;: 12,
+                            &quot;answer&quot;: {
+                                &quot;25&quot;: null,
+                                &quot;26&quot;: null
+                            },
+                            &quot;qsn_opt_id&quot;: null,
+                            &quot;other_answer&quot;: null,
+                            &quot;other_values&quot;: null,
+                            &quot;created_at&quot;: &quot;2021-10-27T06:05:30.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2021-10-27T06:05:30.000000Z&quot;
+                        }
+                    ],
+                    &quot;question_option&quot;: [
+                        {
+                            &quot;id&quot;: 25,
+                            &quot;parent_id&quot;: 0,
+                            &quot;qsn_id&quot;: 12,
+                            &quot;option_number&quot;: &quot;1&quot;,
+                            &quot;option_name&quot;: &quot;Year&quot;,
+                            &quot;option_order&quot;: 1,
+                            &quot;option_type&quot;: &quot;input&quot;,
+                            &quot;options&quot;: null,
+                            &quot;remarks&quot;: null,
+                            &quot;created_at&quot;: &quot;2021-10-26T09:07:49.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2021-10-26T09:07:49.000000Z&quot;
+                        },
+                        {
+                            &quot;id&quot;: 26,
+                            &quot;parent_id&quot;: 0,
+                            &quot;qsn_id&quot;: 12,
+                            &quot;option_number&quot;: &quot;2&quot;,
+                            &quot;option_name&quot;: &quot;Month&quot;,
+                            &quot;option_order&quot;: 2,
+                            &quot;option_type&quot;: &quot;input&quot;,
+                            &quot;options&quot;: null,
+                            &quot;remarks&quot;: null,
+                            &quot;created_at&quot;: &quot;2021-10-26T09:07:49.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2021-10-26T09:07:49.000000Z&quot;
+                        }
+                    ]
+                },
+                {
+                    &quot;id&quot;: 13,
+                    &quot;parent_id&quot;: 8,
+                    &quot;qsn_number&quot;: &quot;2.5&quot;,
+                    &quot;qsn_name&quot;: &quot;HAN&quot;,
+                    &quot;ans_type&quot;: &quot;multiple_input&quot;,
+                    &quot;qst_status&quot;: &quot;active&quot;,
+                    &quot;required&quot;: &quot;no&quot;,
+                    &quot;instruction&quot;: null,
+                    &quot;qsn_modify&quot;: &quot;yes&quot;,
+                    &quot;qsn_order&quot;: 13,
+                    &quot;created_at&quot;: &quot;2021-10-26T09:08:27.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-10-26T09:08:27.000000Z&quot;,
+                    &quot;answer&quot;: [
+                        {
+                            &quot;id&quot;: 12,
+                            &quot;enumerator_assign_id&quot;: 1,
+                            &quot;qsn_id&quot;: 13,
+                            &quot;answer&quot;: {
+                                &quot;27&quot;: null,
+                                &quot;28&quot;: null
+                            },
+                            &quot;qsn_opt_id&quot;: null,
+                            &quot;other_answer&quot;: null,
+                            &quot;other_values&quot;: null,
+                            &quot;created_at&quot;: &quot;2021-10-27T06:05:31.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2021-10-27T06:05:31.000000Z&quot;
+                        }
+                    ],
+                    &quot;question_option&quot;: [
+                        {
+                            &quot;id&quot;: 27,
+                            &quot;parent_id&quot;: 0,
+                            &quot;qsn_id&quot;: 13,
+                            &quot;option_number&quot;: &quot;1&quot;,
+                            &quot;option_name&quot;: &quot;Year&quot;,
+                            &quot;option_order&quot;: 1,
+                            &quot;option_type&quot;: &quot;input&quot;,
+                            &quot;options&quot;: null,
+                            &quot;remarks&quot;: null,
+                            &quot;created_at&quot;: &quot;2021-10-26T09:08:28.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2021-10-26T09:08:28.000000Z&quot;
+                        },
+                        {
+                            &quot;id&quot;: 28,
+                            &quot;parent_id&quot;: 0,
+                            &quot;qsn_id&quot;: 13,
+                            &quot;option_number&quot;: &quot;2&quot;,
+                            &quot;option_name&quot;: &quot;Month&quot;,
+                            &quot;option_order&quot;: 2,
+                            &quot;option_type&quot;: &quot;input&quot;,
+                            &quot;options&quot;: null,
+                            &quot;remarks&quot;: null,
+                            &quot;created_at&quot;: &quot;2021-10-26T09:08:28.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2021-10-26T09:08:28.000000Z&quot;
+                        }
+                    ]
+                }
+            ],
+            &quot;answer&quot;: []
+        },
+        {
+            &quot;id&quot;: 14,
+            &quot;qsn_number&quot;: &quot;3&quot;,
+            &quot;qsn_name&quot;: &quot;Economic Sector/Sub-sectors: (Select one which best applies to your business enterprise)&quot;,
+            &quot;ans_type&quot;: &quot;sector&quot;,
+            &quot;qsn_status&quot;: &quot;active&quot;,
+            &quot;required&quot;: &quot;yes&quot;,
+            &quot;instruction&quot;: null,
+            &quot;sector&quot;: {
+                &quot;id&quot;: 7,
+                &quot;parent_id&quot;: 0,
+                &quot;sector_name&quot;: &quot;Agriculture&quot;,
+                &quot;created_at&quot;: &quot;2021-10-02T08:59:32.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2021-10-02T08:59:32.000000Z&quot;
+            },
+            &quot;sub_sectors&quot;: [
+                {
+                    &quot;id&quot;: 9,
+                    &quot;parent_id&quot;: 7,
+                    &quot;sector_name&quot;: &quot;Vegetable Farming&quot;,
+                    &quot;created_at&quot;: null,
+                    &quot;updated_at&quot;: null
+                }
+            ],
+            &quot;answer&quot;: [
+                {
+                    &quot;id&quot;: 13,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;qsn_id&quot;: 14,
+                    &quot;answer&quot;: &quot;9&quot;,
+                    &quot;qsn_opt_id&quot;: null,
+                    &quot;other_answer&quot;: null,
+                    &quot;other_values&quot;: null,
+                    &quot;created_at&quot;: &quot;2021-10-27T06:07:04.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-10-27T06:07:04.000000Z&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 15,
+            &quot;qsn_number&quot;: &quot;4&quot;,
+            &quot;qsn_name&quot;: &quot;Please mentioned maximum four major products or services of your enterprises from the given dropdown lists respective sector:&quot;,
+            &quot;ans_type&quot;: &quot;multiple_input&quot;,
+            &quot;qsn_status&quot;: &quot;active&quot;,
+            &quot;required&quot;: &quot;yes&quot;,
+            &quot;instruction&quot;: null,
+            &quot;question_options&quot;: [
+                {
+                    &quot;id&quot;: 29,
+                    &quot;qsn_id&quot;: 15,
+                    &quot;option_number&quot;: &quot;1&quot;,
+                    &quot;option_name&quot;: &quot;a&quot;,
+                    &quot;option_order&quot;: 1,
+                    &quot;option_type&quot;: &quot;input&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 30,
+                    &quot;qsn_id&quot;: 15,
+                    &quot;option_number&quot;: &quot;2&quot;,
+                    &quot;option_name&quot;: &quot;b&quot;,
+                    &quot;option_order&quot;: 2,
+                    &quot;option_type&quot;: &quot;input&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 31,
+                    &quot;qsn_id&quot;: 15,
+                    &quot;option_number&quot;: &quot;3&quot;,
+                    &quot;option_name&quot;: &quot;c&quot;,
+                    &quot;option_order&quot;: 3,
+                    &quot;option_type&quot;: &quot;input&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 32,
+                    &quot;qsn_id&quot;: 15,
+                    &quot;option_number&quot;: &quot;4&quot;,
+                    &quot;option_name&quot;: &quot;d&quot;,
+                    &quot;option_order&quot;: 4,
+                    &quot;option_type&quot;: &quot;input&quot;,
+                    &quot;options&quot;: null
+                }
+            ],
+            &quot;answer&quot;: [
+                {
+                    &quot;id&quot;: 14,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;qsn_id&quot;: 15,
+                    &quot;answer&quot;: {
+                        &quot;29&quot;: &quot;one&quot;,
+                        &quot;30&quot;: &quot;two&quot;,
+                        &quot;31&quot;: &quot;three&quot;,
+                        &quot;32&quot;: &quot;four&quot;
+                    },
+                    &quot;qsn_opt_id&quot;: null,
+                    &quot;other_answer&quot;: null,
+                    &quot;other_values&quot;: null,
+                    &quot;created_at&quot;: &quot;2021-10-27T06:08:48.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-10-27T06:08:48.000000Z&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 16,
+            &quot;qsn_number&quot;: &quot;5&quot;,
+            &quot;qsn_name&quot;: &quot;Please give the information on number and types of human resources (all types) currently working in your enterprise&quot;,
+            &quot;ans_type&quot;: &quot;external_table&quot;,
+            &quot;qsn_status&quot;: &quot;active&quot;,
+            &quot;required&quot;: &quot;yes&quot;,
+            &quot;instruction&quot;: null,
+            &quot;human_resource&quot;: [
+                &quot;Employer&quot;,
+                &quot;Family Member&quot;,
+                &quot;Employees&quot;,
+                &quot;Others&quot;
+            ],
+            &quot;workers&quot;: [
+                &quot;Managerial&quot;,
+                &quot;Technical&quot;,
+                &quot;Administrative&quot;,
+                &quot;Assisting&quot;
+            ],
+            &quot;answer&quot;: [
+                {
+                    &quot;id&quot;: 49,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;resource_type&quot;: &quot;employer&quot;,
+                    &quot;working_type&quot;: &quot;managerial&quot;,
+                    &quot;male_count&quot;: 10,
+                    &quot;female_count&quot;: 0,
+                    &quot;minority_count&quot;: 0,
+                    &quot;nepali_count&quot;: 0,
+                    &quot;neighboring_count&quot;: null,
+                    &quot;foreigner_count&quot;: 0,
+                    &quot;total&quot;: 0,
+                    &quot;created_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 50,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;resource_type&quot;: &quot;employer&quot;,
+                    &quot;working_type&quot;: &quot;technical&quot;,
+                    &quot;male_count&quot;: 0,
+                    &quot;female_count&quot;: 0,
+                    &quot;minority_count&quot;: 0,
+                    &quot;nepali_count&quot;: 0,
+                    &quot;neighboring_count&quot;: null,
+                    &quot;foreigner_count&quot;: 0,
+                    &quot;total&quot;: 0,
+                    &quot;created_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 51,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;resource_type&quot;: &quot;employer&quot;,
+                    &quot;working_type&quot;: &quot;administrative&quot;,
+                    &quot;male_count&quot;: 0,
+                    &quot;female_count&quot;: 0,
+                    &quot;minority_count&quot;: 0,
+                    &quot;nepali_count&quot;: 0,
+                    &quot;neighboring_count&quot;: null,
+                    &quot;foreigner_count&quot;: 0,
+                    &quot;total&quot;: 0,
+                    &quot;created_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 52,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;resource_type&quot;: &quot;employer&quot;,
+                    &quot;working_type&quot;: &quot;assisting&quot;,
+                    &quot;male_count&quot;: 0,
+                    &quot;female_count&quot;: 0,
+                    &quot;minority_count&quot;: 0,
+                    &quot;nepali_count&quot;: 0,
+                    &quot;neighboring_count&quot;: null,
+                    &quot;foreigner_count&quot;: 0,
+                    &quot;total&quot;: 0,
+                    &quot;created_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 53,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;resource_type&quot;: &quot;family_member&quot;,
+                    &quot;working_type&quot;: &quot;managerial&quot;,
+                    &quot;male_count&quot;: 0,
+                    &quot;female_count&quot;: 0,
+                    &quot;minority_count&quot;: 0,
+                    &quot;nepali_count&quot;: 0,
+                    &quot;neighboring_count&quot;: null,
+                    &quot;foreigner_count&quot;: 0,
+                    &quot;total&quot;: 0,
+                    &quot;created_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 54,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;resource_type&quot;: &quot;family_member&quot;,
+                    &quot;working_type&quot;: &quot;technical&quot;,
+                    &quot;male_count&quot;: 0,
+                    &quot;female_count&quot;: 0,
+                    &quot;minority_count&quot;: 0,
+                    &quot;nepali_count&quot;: 0,
+                    &quot;neighboring_count&quot;: null,
+                    &quot;foreigner_count&quot;: 0,
+                    &quot;total&quot;: 0,
+                    &quot;created_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 55,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;resource_type&quot;: &quot;family_member&quot;,
+                    &quot;working_type&quot;: &quot;administrative&quot;,
+                    &quot;male_count&quot;: 0,
+                    &quot;female_count&quot;: 0,
+                    &quot;minority_count&quot;: 0,
+                    &quot;nepali_count&quot;: 0,
+                    &quot;neighboring_count&quot;: null,
+                    &quot;foreigner_count&quot;: 0,
+                    &quot;total&quot;: 0,
+                    &quot;created_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 56,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;resource_type&quot;: &quot;family_member&quot;,
+                    &quot;working_type&quot;: &quot;assisting&quot;,
+                    &quot;male_count&quot;: 0,
+                    &quot;female_count&quot;: 0,
+                    &quot;minority_count&quot;: 0,
+                    &quot;nepali_count&quot;: 0,
+                    &quot;neighboring_count&quot;: null,
+                    &quot;foreigner_count&quot;: 0,
+                    &quot;total&quot;: 0,
+                    &quot;created_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 57,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;resource_type&quot;: &quot;employees&quot;,
+                    &quot;working_type&quot;: &quot;managerial&quot;,
+                    &quot;male_count&quot;: 0,
+                    &quot;female_count&quot;: 0,
+                    &quot;minority_count&quot;: 0,
+                    &quot;nepali_count&quot;: 0,
+                    &quot;neighboring_count&quot;: null,
+                    &quot;foreigner_count&quot;: 0,
+                    &quot;total&quot;: 0,
+                    &quot;created_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 58,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;resource_type&quot;: &quot;employees&quot;,
+                    &quot;working_type&quot;: &quot;technical&quot;,
+                    &quot;male_count&quot;: 0,
+                    &quot;female_count&quot;: 0,
+                    &quot;minority_count&quot;: 0,
+                    &quot;nepali_count&quot;: 0,
+                    &quot;neighboring_count&quot;: null,
+                    &quot;foreigner_count&quot;: 0,
+                    &quot;total&quot;: 0,
+                    &quot;created_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 59,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;resource_type&quot;: &quot;employees&quot;,
+                    &quot;working_type&quot;: &quot;administrative&quot;,
+                    &quot;male_count&quot;: 0,
+                    &quot;female_count&quot;: 0,
+                    &quot;minority_count&quot;: 0,
+                    &quot;nepali_count&quot;: 0,
+                    &quot;neighboring_count&quot;: null,
+                    &quot;foreigner_count&quot;: 0,
+                    &quot;total&quot;: 0,
+                    &quot;created_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 60,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;resource_type&quot;: &quot;employees&quot;,
+                    &quot;working_type&quot;: &quot;assisting&quot;,
+                    &quot;male_count&quot;: 0,
+                    &quot;female_count&quot;: 0,
+                    &quot;minority_count&quot;: 0,
+                    &quot;nepali_count&quot;: 0,
+                    &quot;neighboring_count&quot;: null,
+                    &quot;foreigner_count&quot;: 0,
+                    &quot;total&quot;: 0,
+                    &quot;created_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 61,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;resource_type&quot;: &quot;others&quot;,
+                    &quot;working_type&quot;: &quot;managerial&quot;,
+                    &quot;male_count&quot;: 0,
+                    &quot;female_count&quot;: 0,
+                    &quot;minority_count&quot;: 0,
+                    &quot;nepali_count&quot;: 0,
+                    &quot;neighboring_count&quot;: null,
+                    &quot;foreigner_count&quot;: 0,
+                    &quot;total&quot;: 0,
+                    &quot;created_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 62,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;resource_type&quot;: &quot;others&quot;,
+                    &quot;working_type&quot;: &quot;technical&quot;,
+                    &quot;male_count&quot;: 0,
+                    &quot;female_count&quot;: 0,
+                    &quot;minority_count&quot;: 0,
+                    &quot;nepali_count&quot;: 0,
+                    &quot;neighboring_count&quot;: null,
+                    &quot;foreigner_count&quot;: 0,
+                    &quot;total&quot;: 0,
+                    &quot;created_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 63,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;resource_type&quot;: &quot;others&quot;,
+                    &quot;working_type&quot;: &quot;administrative&quot;,
+                    &quot;male_count&quot;: 0,
+                    &quot;female_count&quot;: 0,
+                    &quot;minority_count&quot;: 0,
+                    &quot;nepali_count&quot;: 0,
+                    &quot;neighboring_count&quot;: null,
+                    &quot;foreigner_count&quot;: 0,
+                    &quot;total&quot;: 0,
+                    &quot;created_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 64,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;resource_type&quot;: &quot;others&quot;,
+                    &quot;working_type&quot;: &quot;assisting&quot;,
+                    &quot;male_count&quot;: 0,
+                    &quot;female_count&quot;: 0,
+                    &quot;minority_count&quot;: 0,
+                    &quot;nepali_count&quot;: 0,
+                    &quot;neighboring_count&quot;: null,
+                    &quot;foreigner_count&quot;: 0,
+                    &quot;total&quot;: 0,
+                    &quot;created_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-11-02T05:17:44.000000Z&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 17,
+            &quot;qsn_number&quot;: &quot;6.a&quot;,
+            &quot;qsn_name&quot;: &quot;Please provide the following information related to technical human resources presently working in your enterprises. (Use this table to collect department wise information for bigger enterprises)&quot;,
+            &quot;ans_type&quot;: &quot;external_table&quot;,
+            &quot;qsn_status&quot;: &quot;active&quot;,
+            &quot;required&quot;: &quot;yes&quot;,
+            &quot;instruction&quot;: &quot;Technical Human Resources Related Information&quot;,
+            &quot;working_hour&quot;: [
+                &quot;Full time(40 hours and +)&quot;,
+                &quot;Part time(less than 40 hours)&quot;
+            ],
+            &quot;nature_of_work&quot;: [
+                &quot;Regular&quot;,
+                &quot;Seasonal&quot;
+            ],
+            &quot;training&quot;: [
+                &quot;Trained&quot;,
+                &quot;Untrained&quot;
+            ],
+            &quot;educational_qualification_general&quot;: [
+                {
+                    &quot;id&quot;: 1,
+                    &quot;name&quot;: &quot;Illiterate&quot;,
+                    &quot;type&quot;: &quot;general&quot;,
+                    &quot;created_at&quot;: &quot;2021-09-27T11:44:31.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-09-27T11:44:49.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 2,
+                    &quot;name&quot;: &quot;Literate&quot;,
+                    &quot;type&quot;: &quot;general&quot;,
+                    &quot;created_at&quot;: &quot;2021-09-27T11:45:16.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-09-27T11:45:16.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 3,
+                    &quot;name&quot;: &quot;Basic Education (Class 8)&quot;,
+                    &quot;type&quot;: &quot;general&quot;,
+                    &quot;created_at&quot;: &quot;2021-09-27T11:45:29.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-09-27T11:45:29.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 4,
+                    &quot;name&quot;: &quot;Secondary Education (Class 10)&quot;,
+                    &quot;type&quot;: &quot;general&quot;,
+                    &quot;created_at&quot;: &quot;2021-09-27T11:45:38.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-09-27T11:45:38.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 5,
+                    &quot;name&quot;: &quot;Secondary Education (Class 12)&quot;,
+                    &quot;type&quot;: &quot;general&quot;,
+                    &quot;created_at&quot;: &quot;2021-09-27T11:45:50.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-09-27T11:45:50.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 6,
+                    &quot;name&quot;: &quot;Bachelor Degree&quot;,
+                    &quot;type&quot;: &quot;general&quot;,
+                    &quot;created_at&quot;: &quot;2021-09-27T11:45:57.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-09-27T11:45:57.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 7,
+                    &quot;name&quot;: &quot;Master Degree  and Above&quot;,
+                    &quot;type&quot;: &quot;general&quot;,
+                    &quot;created_at&quot;: &quot;2021-09-27T11:46:07.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-09-27T11:46:07.000000Z&quot;
+                }
+            ],
+            &quot;educational_qualification_tvet&quot;: [
+                {
+                    &quot;id&quot;: 8,
+                    &quot;name&quot;: &quot;Skill Level 1&quot;,
+                    &quot;type&quot;: &quot;tvet&quot;,
+                    &quot;created_at&quot;: &quot;2021-09-27T11:46:33.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-09-27T11:46:33.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 9,
+                    &quot;name&quot;: &quot;Skill Level 2&quot;,
+                    &quot;type&quot;: &quot;tvet&quot;,
+                    &quot;created_at&quot;: &quot;2021-09-27T11:46:41.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-09-27T11:46:41.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 10,
+                    &quot;name&quot;: &quot;Skill Level 3&quot;,
+                    &quot;type&quot;: &quot;tvet&quot;,
+                    &quot;created_at&quot;: &quot;2021-09-27T11:46:53.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-09-27T11:46:53.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 11,
+                    &quot;name&quot;: &quot;Pre-diploma&quot;,
+                    &quot;type&quot;: &quot;tvet&quot;,
+                    &quot;created_at&quot;: &quot;2021-09-27T11:47:10.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-09-27T11:47:10.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 12,
+                    &quot;name&quot;: &quot;Diploma&quot;,
+                    &quot;type&quot;: &quot;tvet&quot;,
+                    &quot;created_at&quot;: &quot;2021-09-27T11:47:26.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-09-27T11:47:26.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 13,
+                    &quot;name&quot;: &quot;Higher Technical Education (Bachelor Level)&quot;,
+                    &quot;type&quot;: &quot;tvet&quot;,
+                    &quot;created_at&quot;: &quot;2021-09-27T11:47:40.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-09-27T11:47:40.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 14,
+                    &quot;name&quot;: &quot;Higher Technical Education (Master and Above&quot;,
+                    &quot;type&quot;: &quot;tvet&quot;,
+                    &quot;created_at&quot;: &quot;2021-09-27T11:47:58.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-09-27T11:47:58.000000Z&quot;
+                }
+            ],
+            &quot;answer&quot;: []
+        },
+        {
+            &quot;id&quot;: 18,
+            &quot;qsn_number&quot;: &quot;6.b&quot;,
+            &quot;qsn_name&quot;: &quot;Please provide the employment status of following occupations in your enterprises as per the mentioned table.&quot;,
+            &quot;ans_type&quot;: &quot;external_table&quot;,
+            &quot;qsn_status&quot;: &quot;active&quot;,
+            &quot;required&quot;: &quot;yes&quot;,
+            &quot;instruction&quot;: null,
+            &quot;sector&quot;: {
+                &quot;id&quot;: 7,
+                &quot;parent_id&quot;: 0,
+                &quot;sector_name&quot;: &quot;Agriculture&quot;,
+                &quot;created_at&quot;: &quot;2021-10-02T08:59:32.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2021-10-02T08:59:32.000000Z&quot;
+            },
+            &quot;occupations&quot;: [
+                {
+                    &quot;id&quot;: 3,
+                    &quot;sector_id&quot;: 7,
+                    &quot;occupation_name&quot;: &quot;Farm Technician Level 2&quot;,
+                    &quot;created_at&quot;: &quot;2021-10-02T08:59:44.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-10-02T08:59:44.000000Z&quot;
+                }
+            ],
+            &quot;answer&quot;: []
+        },
+        {
+            &quot;id&quot;: 19,
+            &quot;qsn_number&quot;: &quot;7&quot;,
+            &quot;qsn_name&quot;: &quot;How do you find the average competency level of these technical staffs presently working in your enterprises?&quot;,
+            &quot;ans_type&quot;: &quot;radio&quot;,
+            &quot;qsn_status&quot;: &quot;active&quot;,
+            &quot;required&quot;: &quot;yes&quot;,
+            &quot;instruction&quot;: null,
+            &quot;question_options&quot;: [
+                {
+                    &quot;id&quot;: 33,
+                    &quot;qsn_id&quot;: 19,
+                    &quot;option_number&quot;: &quot;a&quot;,
+                    &quot;option_name&quot;: &quot;Highly satisfactory competency level&quot;,
+                    &quot;option_order&quot;: 1,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 34,
+                    &quot;qsn_id&quot;: 19,
+                    &quot;option_number&quot;: &quot;b&quot;,
+                    &quot;option_name&quot;: &quot;Satisfactory competency level&quot;,
+                    &quot;option_order&quot;: 2,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 35,
+                    &quot;qsn_id&quot;: 19,
+                    &quot;option_number&quot;: &quot;c&quot;,
+                    &quot;option_name&quot;: &quot;Average competency level&quot;,
+                    &quot;option_order&quot;: 3,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 36,
+                    &quot;qsn_id&quot;: 19,
+                    &quot;option_number&quot;: &quot;d&quot;,
+                    &quot;option_name&quot;: &quot;Unsatisfactory competency level&quot;,
+                    &quot;option_order&quot;: 4,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 37,
+                    &quot;qsn_id&quot;: 19,
+                    &quot;option_number&quot;: &quot;e&quot;,
+                    &quot;option_name&quot;: &quot;Highly unsatisfactory competence level&quot;,
+                    &quot;option_order&quot;: 5,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                }
+            ],
+            &quot;answer&quot;: [
+                {
+                    &quot;id&quot;: 15,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;qsn_id&quot;: 19,
+                    &quot;answer&quot;: null,
+                    &quot;qsn_opt_id&quot;: 33,
+                    &quot;other_answer&quot;: null,
+                    &quot;other_values&quot;: null,
+                    &quot;created_at&quot;: &quot;2021-10-27T09:29:01.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-10-27T09:29:01.000000Z&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 20,
+            &quot;qsn_number&quot;: &quot;8&quot;,
+            &quot;qsn_name&quot;: &quot;Is there any other specific occupation in your enterprise which you usually feel harder to recruit?&quot;,
+            &quot;ans_type&quot;: &quot;cond_radio&quot;,
+            &quot;qsn_status&quot;: &quot;active&quot;,
+            &quot;required&quot;: &quot;yes&quot;,
+            &quot;instruction&quot;: null,
+            &quot;question_options&quot;: [
+                {
+                    &quot;id&quot;: 38,
+                    &quot;qsn_id&quot;: 20,
+                    &quot;option_number&quot;: &quot;a&quot;,
+                    &quot;option_name&quot;: &quot;Yes&quot;,
+                    &quot;option_order&quot;: 1,
+                    &quot;option_type&quot;: &quot;cond_radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 39,
+                    &quot;qsn_id&quot;: 20,
+                    &quot;option_number&quot;: &quot;b&quot;,
+                    &quot;option_name&quot;: &quot;No&quot;,
+                    &quot;option_order&quot;: 2,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                }
+            ],
+            &quot;answer&quot;: [
+                {
+                    &quot;id&quot;: 32,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;qsn_id&quot;: 20,
+                    &quot;answer&quot;: null,
+                    &quot;qsn_opt_id&quot;: 38,
+                    &quot;other_answer&quot;: null,
+                    &quot;other_values&quot;: null,
+                    &quot;created_at&quot;: &quot;2021-11-02T09:11:36.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-11-03T09:24:23.000000Z&quot;,
+                    &quot;other_occup&quot;: []
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 21,
+            &quot;qsn_number&quot;: &quot;9&quot;,
+            &quot;qsn_name&quot;: &quot;Is it easy to get the trained workforce/human resources to run/operate your business comfortably?&quot;,
+            &quot;ans_type&quot;: &quot;cond_radio&quot;,
+            &quot;qsn_status&quot;: &quot;active&quot;,
+            &quot;required&quot;: &quot;yes&quot;,
+            &quot;instruction&quot;: null,
+            &quot;question_options&quot;: [
+                {
+                    &quot;id&quot;: 40,
+                    &quot;qsn_id&quot;: 21,
+                    &quot;option_number&quot;: &quot;a&quot;,
+                    &quot;option_name&quot;: &quot;Yes&quot;,
+                    &quot;option_order&quot;: 1,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 41,
+                    &quot;qsn_id&quot;: 21,
+                    &quot;option_number&quot;: &quot;b&quot;,
+                    &quot;option_name&quot;: &quot;No&quot;,
+                    &quot;option_order&quot;: 2,
+                    &quot;option_type&quot;: &quot;cond_radio&quot;,
+                    &quot;options&quot;: null
+                }
+            ],
+            &quot;answer&quot;: [
+                {
+                    &quot;id&quot;: 18,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;qsn_id&quot;: 21,
+                    &quot;answer&quot;: null,
+                    &quot;qsn_opt_id&quot;: 41,
+                    &quot;other_answer&quot;: null,
+                    &quot;other_values&quot;: null,
+                    &quot;created_at&quot;: &quot;2021-10-27T11:17:13.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-10-28T05:09:37.000000Z&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 23,
+            &quot;qsn_number&quot;: &quot;10&quot;,
+            &quot;qsn_name&quot;: &quot;What is the major source of technical human resources for your enterprises at present?&quot;,
+            &quot;ans_type&quot;: &quot;radio&quot;,
+            &quot;qsn_status&quot;: &quot;active&quot;,
+            &quot;required&quot;: &quot;yes&quot;,
+            &quot;instruction&quot;: null,
+            &quot;question_options&quot;: [
+                {
+                    &quot;id&quot;: 42,
+                    &quot;qsn_id&quot;: 23,
+                    &quot;option_number&quot;: &quot;a&quot;,
+                    &quot;option_name&quot;: &quot;Certified by NSTB as skilled workforces&quot;,
+                    &quot;option_order&quot;: 1,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 43,
+                    &quot;qsn_id&quot;: 23,
+                    &quot;option_number&quot;: &quot;b&quot;,
+                    &quot;option_name&quot;: &quot;Trained under CTEVT developed curricula (despite not having NSTB certificate)&quot;,
+                    &quot;option_order&quot;: 2,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 44,
+                    &quot;qsn_id&quot;: 23,
+                    &quot;option_number&quot;: &quot;c&quot;,
+                    &quot;option_name&quot;: &quot;Trained under locally developed curricula (other than developed or approved by CTEVT)&quot;,
+                    &quot;option_order&quot;: 3,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 45,
+                    &quot;qsn_id&quot;: 23,
+                    &quot;option_number&quot;: &quot;d&quot;,
+                    &quot;option_name&quot;: &quot;Trained under formal training wings of company itself&quot;,
+                    &quot;option_order&quot;: 4,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 46,
+                    &quot;qsn_id&quot;: 23,
+                    &quot;option_number&quot;: &quot;e&quot;,
+                    &quot;option_name&quot;: &quot;Self-trained under formal or none formal apprenticeship modality&quot;,
+                    &quot;option_order&quot;: 5,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 47,
+                    &quot;qsn_id&quot;: 23,
+                    &quot;option_number&quot;: &quot;f&quot;,
+                    &quot;option_name&quot;: &quot;Having experiences developed working in other companies&quot;,
+                    &quot;option_order&quot;: 6,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 48,
+                    &quot;qsn_id&quot;: 23,
+                    &quot;option_number&quot;: &quot;g&quot;,
+                    &quot;option_name&quot;: &quot;Recruit as workers from neighboring and other countries&quot;,
+                    &quot;option_order&quot;: 7,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 49,
+                    &quot;qsn_id&quot;: 23,
+                    &quot;option_number&quot;: &quot;h&quot;,
+                    &quot;option_name&quot;: &quot;Others&quot;,
+                    &quot;option_order&quot;: 8,
+                    &quot;option_type&quot;: &quot;others&quot;,
+                    &quot;options&quot;: null
+                }
+            ],
+            &quot;answer&quot;: [
+                {
+                    &quot;id&quot;: 17,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;qsn_id&quot;: 23,
+                    &quot;answer&quot;: null,
+                    &quot;qsn_opt_id&quot;: 49,
+                    &quot;other_answer&quot;: &quot;wrerererrewrew&quot;,
+                    &quot;other_values&quot;: null,
+                    &quot;created_at&quot;: &quot;2021-10-27T09:33:32.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-10-28T05:11:27.000000Z&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 24,
+            &quot;qsn_number&quot;: &quot;11&quot;,
+            &quot;qsn_name&quot;: &quot;How the skills acquire by formally trained individuals from the training institutes matches to your business requirement?&quot;,
+            &quot;ans_type&quot;: &quot;radio&quot;,
+            &quot;qsn_status&quot;: &quot;active&quot;,
+            &quot;required&quot;: &quot;yes&quot;,
+            &quot;instruction&quot;: null,
+            &quot;question_options&quot;: [
+                {
+                    &quot;id&quot;: 50,
+                    &quot;qsn_id&quot;: 24,
+                    &quot;option_number&quot;: &quot;a&quot;,
+                    &quot;option_name&quot;: &quot;Matches up to 20%&quot;,
+                    &quot;option_order&quot;: 1,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 51,
+                    &quot;qsn_id&quot;: 24,
+                    &quot;option_number&quot;: &quot;b&quot;,
+                    &quot;option_name&quot;: &quot;Matches 21 to 40%&quot;,
+                    &quot;option_order&quot;: 2,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 52,
+                    &quot;qsn_id&quot;: 24,
+                    &quot;option_number&quot;: &quot;c&quot;,
+                    &quot;option_name&quot;: &quot;Matches 41 to 60%&quot;,
+                    &quot;option_order&quot;: 3,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 53,
+                    &quot;qsn_id&quot;: 24,
+                    &quot;option_number&quot;: &quot;d&quot;,
+                    &quot;option_name&quot;: &quot;Matches 61 to 80%&quot;,
+                    &quot;option_order&quot;: 4,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 54,
+                    &quot;qsn_id&quot;: 24,
+                    &quot;option_number&quot;: &quot;e&quot;,
+                    &quot;option_name&quot;: &quot;Matches 81 to 100%&quot;,
+                    &quot;option_order&quot;: 5,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                }
+            ],
+            &quot;answer&quot;: [
+                {
+                    &quot;id&quot;: 21,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;qsn_id&quot;: 24,
+                    &quot;answer&quot;: null,
+                    &quot;qsn_opt_id&quot;: 52,
+                    &quot;other_answer&quot;: null,
+                    &quot;other_values&quot;: null,
+                    &quot;created_at&quot;: &quot;2021-10-28T05:12:42.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-10-28T05:12:42.000000Z&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 25,
+            &quot;qsn_number&quot;: &quot;12&quot;,
+            &quot;qsn_name&quot;: &quot;Do you provide employment to both trained (trained under formal/non formal training programs) and untrained (learned from experience) technical workers in your enterprises?&quot;,
+            &quot;ans_type&quot;: &quot;cond_radio&quot;,
+            &quot;qsn_status&quot;: &quot;active&quot;,
+            &quot;required&quot;: &quot;yes&quot;,
+            &quot;instruction&quot;: null,
+            &quot;question_options&quot;: [
+                {
+                    &quot;id&quot;: 55,
+                    &quot;qsn_id&quot;: 25,
+                    &quot;option_number&quot;: &quot;a&quot;,
+                    &quot;option_name&quot;: &quot;Yes&quot;,
+                    &quot;option_order&quot;: 1,
+                    &quot;option_type&quot;: &quot;cond_radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 56,
+                    &quot;qsn_id&quot;: 25,
+                    &quot;option_number&quot;: &quot;b&quot;,
+                    &quot;option_name&quot;: &quot;No&quot;,
+                    &quot;option_order&quot;: 2,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                }
+            ],
+            &quot;answer&quot;: [
+                {
+                    &quot;id&quot;: 22,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;qsn_id&quot;: 25,
+                    &quot;answer&quot;: null,
+                    &quot;qsn_opt_id&quot;: 56,
+                    &quot;other_answer&quot;: null,
+                    &quot;other_values&quot;: null,
+                    &quot;created_at&quot;: &quot;2021-10-28T05:42:15.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-10-28T05:44:58.000000Z&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 27,
+            &quot;qsn_number&quot;: &quot;13&quot;,
+            &quot;qsn_name&quot;: &quot;How you would rate your workers on the following soft skill aspects under the category of 5. Excellent 4. Very good 3. Good 3. Satisfactory 1. Poor&quot;,
+            &quot;ans_type&quot;: &quot;external_table&quot;,
+            &quot;qsn_status&quot;: &quot;active&quot;,
+            &quot;required&quot;: &quot;yes&quot;,
+            &quot;instruction&quot;: null,
+            &quot;worker_skills&quot;: [
+                &quot;Communication Skills&quot;,
+                &quot;Punctuality/Integrity&quot;,
+                &quot;Team Work behaviors&quot;,
+                &quot;Leadership Skills&quot;,
+                &quot;Interpersonal Skills&quot;
+            ],
+            &quot;answer&quot;: []
+        },
+        {
+            &quot;id&quot;: 28,
+            &quot;qsn_number&quot;: &quot;14&quot;,
+            &quot;qsn_name&quot;: &quot;Based on your experience, what was the scope and trend of nature of the business you involved in the past three years ignoring the effect of COVID-19?&quot;,
+            &quot;ans_type&quot;: &quot;radio&quot;,
+            &quot;qsn_status&quot;: &quot;active&quot;,
+            &quot;required&quot;: &quot;yes&quot;,
+            &quot;instruction&quot;: null,
+            &quot;question_options&quot;: [
+                {
+                    &quot;id&quot;: 62,
+                    &quot;qsn_id&quot;: 28,
+                    &quot;option_number&quot;: &quot;a&quot;,
+                    &quot;option_name&quot;: &quot;Scope was decreasing&quot;,
+                    &quot;option_order&quot;: 1,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 63,
+                    &quot;qsn_id&quot;: 28,
+                    &quot;option_number&quot;: &quot;b&quot;,
+                    &quot;option_name&quot;: &quot;Scope was constant&quot;,
+                    &quot;option_order&quot;: 2,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 64,
+                    &quot;qsn_id&quot;: 28,
+                    &quot;option_number&quot;: &quot;c&quot;,
+                    &quot;option_name&quot;: &quot;Scope was increasing&quot;,
+                    &quot;option_order&quot;: 3,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                }
+            ],
+            &quot;answer&quot;: [
+                {
+                    &quot;id&quot;: 24,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;qsn_id&quot;: 28,
+                    &quot;answer&quot;: null,
+                    &quot;qsn_opt_id&quot;: 63,
+                    &quot;other_answer&quot;: null,
+                    &quot;other_values&quot;: null,
+                    &quot;created_at&quot;: &quot;2021-10-28T05:47:18.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-10-28T05:47:18.000000Z&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 29,
+            &quot;qsn_number&quot;: &quot;15&quot;,
+            &quot;qsn_name&quot;: &quot;In your opinion, what will be the trend of this sort of business in the future (next three or five years)?&quot;,
+            &quot;ans_type&quot;: &quot;radio&quot;,
+            &quot;qsn_status&quot;: &quot;active&quot;,
+            &quot;required&quot;: &quot;yes&quot;,
+            &quot;instruction&quot;: null,
+            &quot;question_options&quot;: [
+                {
+                    &quot;id&quot;: 65,
+                    &quot;qsn_id&quot;: 29,
+                    &quot;option_number&quot;: &quot;a&quot;,
+                    &quot;option_name&quot;: &quot;Scope seems decreasing&quot;,
+                    &quot;option_order&quot;: 1,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 66,
+                    &quot;qsn_id&quot;: 29,
+                    &quot;option_number&quot;: &quot;b&quot;,
+                    &quot;option_name&quot;: &quot;Scope seems constant&quot;,
+                    &quot;option_order&quot;: 2,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 67,
+                    &quot;qsn_id&quot;: 29,
+                    &quot;option_number&quot;: &quot;c&quot;,
+                    &quot;option_name&quot;: &quot;Scope seems increasing&quot;,
+                    &quot;option_order&quot;: 3,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                }
+            ],
+            &quot;answer&quot;: [
+                {
+                    &quot;id&quot;: 25,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;qsn_id&quot;: 29,
+                    &quot;answer&quot;: null,
+                    &quot;qsn_opt_id&quot;: 65,
+                    &quot;other_answer&quot;: null,
+                    &quot;other_values&quot;: null,
+                    &quot;created_at&quot;: &quot;2021-10-28T05:47:22.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-10-28T05:47:22.000000Z&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 30,
+            &quot;qsn_number&quot;: &quot;16&quot;,
+            &quot;qsn_name&quot;: &quot;What is the future plan of your business?&quot;,
+            &quot;ans_type&quot;: &quot;cond_radio&quot;,
+            &quot;qsn_status&quot;: &quot;active&quot;,
+            &quot;required&quot;: &quot;yes&quot;,
+            &quot;instruction&quot;: null,
+            &quot;question_options&quot;: [
+                {
+                    &quot;id&quot;: 68,
+                    &quot;qsn_id&quot;: 30,
+                    &quot;option_number&quot;: &quot;a&quot;,
+                    &quot;option_name&quot;: &quot;I have plan to continue this business in the same scale&quot;,
+                    &quot;option_order&quot;: 1,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 69,
+                    &quot;qsn_id&quot;: 30,
+                    &quot;option_number&quot;: &quot;b&quot;,
+                    &quot;option_name&quot;: &quot;I have plan to continue this business with decreasing its scale&quot;,
+                    &quot;option_order&quot;: 2,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 70,
+                    &quot;qsn_id&quot;: 30,
+                    &quot;option_number&quot;: &quot;c&quot;,
+                    &quot;option_name&quot;: &quot;I have plan to continue this business with increasing its scale.&quot;,
+                    &quot;option_order&quot;: 3,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 71,
+                    &quot;qsn_id&quot;: 30,
+                    &quot;option_number&quot;: &quot;d&quot;,
+                    &quot;option_name&quot;: &quot;I have plan to shift to another business.&quot;,
+                    &quot;option_order&quot;: 4,
+                    &quot;option_type&quot;: &quot;cond_radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 72,
+                    &quot;qsn_id&quot;: 30,
+                    &quot;option_number&quot;: &quot;e&quot;,
+                    &quot;option_name&quot;: &quot;I am going to terminate this business without any alternative plan.&quot;,
+                    &quot;option_order&quot;: 5,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                }
+            ],
+            &quot;answer&quot;: []
+        },
+        {
+            &quot;id&quot;: 31,
+            &quot;qsn_number&quot;: &quot;17&quot;,
+            &quot;qsn_name&quot;: &quot;Do you plan to adopt the future technology?&quot;,
+            &quot;ans_type&quot;: &quot;radio&quot;,
+            &quot;qsn_status&quot;: &quot;active&quot;,
+            &quot;required&quot;: &quot;yes&quot;,
+            &quot;instruction&quot;: null,
+            &quot;question_options&quot;: [
+                {
+                    &quot;id&quot;: 73,
+                    &quot;qsn_id&quot;: 31,
+                    &quot;option_number&quot;: &quot;a&quot;,
+                    &quot;option_name&quot;: &quot;Yes&quot;,
+                    &quot;option_order&quot;: 1,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 74,
+                    &quot;qsn_id&quot;: 31,
+                    &quot;option_number&quot;: &quot;b&quot;,
+                    &quot;option_name&quot;: &quot;No&quot;,
+                    &quot;option_order&quot;: 2,
+                    &quot;option_type&quot;: &quot;radio&quot;,
+                    &quot;options&quot;: null
+                }
+            ],
+            &quot;answer&quot;: [
+                {
+                    &quot;id&quot;: 26,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;qsn_id&quot;: 31,
+                    &quot;answer&quot;: null,
+                    &quot;qsn_opt_id&quot;: 73,
+                    &quot;other_answer&quot;: null,
+                    &quot;other_values&quot;: null,
+                    &quot;created_at&quot;: &quot;2021-10-28T08:34:01.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-10-28T08:34:01.000000Z&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 32,
+            &quot;qsn_number&quot;: &quot;18&quot;,
+            &quot;qsn_name&quot;: &quot;How you are coordinated by TVET institutions or vice versa regarding the delivery of TVET programs (Multiple answers)&quot;,
+            &quot;ans_type&quot;: &quot;checkbox&quot;,
+            &quot;qsn_status&quot;: &quot;active&quot;,
+            &quot;required&quot;: &quot;yes&quot;,
+            &quot;instruction&quot;: null,
+            &quot;question_options&quot;: [
+                {
+                    &quot;id&quot;: 75,
+                    &quot;qsn_id&quot;: 32,
+                    &quot;option_number&quot;: &quot;1&quot;,
+                    &quot;option_name&quot;: &quot;Trainees frequently visits our industry for work-place practices&quot;,
+                    &quot;option_order&quot;: 1,
+                    &quot;option_type&quot;: &quot;checkbox&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 76,
+                    &quot;qsn_id&quot;: 32,
+                    &quot;option_number&quot;: &quot;2&quot;,
+                    &quot;option_name&quot;: &quot;Trainees occasionally visits our industry for OJT as work-place practice&quot;,
+                    &quot;option_order&quot;: 2,
+                    &quot;option_type&quot;: &quot;checkbox&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 77,
+                    &quot;qsn_id&quot;: 32,
+                    &quot;option_number&quot;: &quot;3&quot;,
+                    &quot;option_name&quot;: &quot;Institutes invites me for curriculum development process.&quot;,
+                    &quot;option_order&quot;: 3,
+                    &quot;option_type&quot;: &quot;checkbox&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 78,
+                    &quot;qsn_id&quot;: 32,
+                    &quot;option_number&quot;: &quot;4&quot;,
+                    &quot;option_name&quot;: &quot;Institute occasionally invites me for policy level interactions.&quot;,
+                    &quot;option_order&quot;: 4,
+                    &quot;option_type&quot;: &quot;checkbox&quot;,
+                    &quot;options&quot;: null
+                }
+            ],
+            &quot;answer&quot;: [
+                {
+                    &quot;id&quot;: 27,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;qsn_id&quot;: 32,
+                    &quot;answer&quot;: &quot;75,76&quot;,
+                    &quot;qsn_opt_id&quot;: null,
+                    &quot;other_answer&quot;: null,
+                    &quot;other_values&quot;: null,
+                    &quot;created_at&quot;: &quot;2021-10-28T08:34:07.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-10-28T08:34:07.000000Z&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 33,
+            &quot;qsn_number&quot;: &quot;19&quot;,
+            &quot;qsn_name&quot;: &quot;Among the various problems for establishing and operating business in your sector or sub-sector, how do you prioritize the problems of human resources? (Fill the boxes in numerical ranking by giving the highest number for high priority)&quot;,
+            &quot;ans_type&quot;: &quot;multiple_input&quot;,
+            &quot;qsn_status&quot;: &quot;active&quot;,
+            &quot;required&quot;: &quot;yes&quot;,
+            &quot;instruction&quot;: null,
+            &quot;question_options&quot;: [
+                {
+                    &quot;id&quot;: 79,
+                    &quot;qsn_id&quot;: 33,
+                    &quot;option_number&quot;: &quot;a&quot;,
+                    &quot;option_name&quot;: &quot;Political instability&quot;,
+                    &quot;option_order&quot;: 1,
+                    &quot;option_type&quot;: &quot;input&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 80,
+                    &quot;qsn_id&quot;: 33,
+                    &quot;option_number&quot;: &quot;b&quot;,
+                    &quot;option_name&quot;: &quot;Rules/Regulations of the government&quot;,
+                    &quot;option_order&quot;: 2,
+                    &quot;option_type&quot;: &quot;input&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 81,
+                    &quot;qsn_id&quot;: 33,
+                    &quot;option_number&quot;: &quot;c&quot;,
+                    &quot;option_name&quot;: &quot;Bureaucratic/administrative hurdles&quot;,
+                    &quot;option_order&quot;: 3,
+                    &quot;option_type&quot;: &quot;input&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 82,
+                    &quot;qsn_id&quot;: 33,
+                    &quot;option_number&quot;: &quot;d&quot;,
+                    &quot;option_name&quot;: &quot;Unfair competition among the enterprisers&quot;,
+                    &quot;option_order&quot;: 4,
+                    &quot;option_type&quot;: &quot;input&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 83,
+                    &quot;qsn_id&quot;: 33,
+                    &quot;option_number&quot;: &quot;e&quot;,
+                    &quot;option_name&quot;: &quot;Problems of skilled human resources&quot;,
+                    &quot;option_order&quot;: 5,
+                    &quot;option_type&quot;: &quot;input&quot;,
+                    &quot;options&quot;: null
+                },
+                {
+                    &quot;id&quot;: 84,
+                    &quot;qsn_id&quot;: 33,
+                    &quot;option_number&quot;: &quot;f&quot;,
+                    &quot;option_name&quot;: &quot;Others&quot;,
+                    &quot;option_order&quot;: 6,
+                    &quot;option_type&quot;: &quot;others&quot;,
+                    &quot;options&quot;: null
+                }
+            ],
+            &quot;answer&quot;: [
+                {
+                    &quot;id&quot;: 29,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;qsn_id&quot;: 33,
+                    &quot;answer&quot;: {
+                        &quot;a&quot;: &quot;1&quot;,
+                        &quot;b&quot;: &quot;3&quot;,
+                        &quot;c&quot;: &quot;4&quot;,
+                        &quot;d&quot;: &quot;5&quot;,
+                        &quot;e&quot;: &quot;6&quot;,
+                        &quot;f&quot;: &quot;7&quot;
+                    },
+                    &quot;qsn_opt_id&quot;: null,
+                    &quot;other_answer&quot;: null,
+                    &quot;other_values&quot;: null,
+                    &quot;created_at&quot;: &quot;2021-10-28T09:00:48.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-10-28T09:00:48.000000Z&quot;
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 34,
+            &quot;qsn_number&quot;: &quot;20&quot;,
+            &quot;qsn_name&quot;: &quot;Please give some suggestion to effectively establish and operationalize the &ldquo;Employer Led Labour Market Secretariat &ndash;ELMS&rdquo; .&quot;,
+            &quot;ans_type&quot;: &quot;input&quot;,
+            &quot;qsn_status&quot;: &quot;active&quot;,
+            &quot;required&quot;: &quot;yes&quot;,
+            &quot;instruction&quot;: null,
+            &quot;answer&quot;: [
+                {
+                    &quot;id&quot;: 28,
+                    &quot;enumerator_assign_id&quot;: 1,
+                    &quot;qsn_id&quot;: 34,
+                    &quot;answer&quot;: &quot;ytttr&quot;,
+                    &quot;qsn_opt_id&quot;: null,
+                    &quot;other_answer&quot;: null,
+                    &quot;other_values&quot;: null,
+                    &quot;created_at&quot;: &quot;2021-10-28T08:35:24.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2021-10-28T08:35:24.000000Z&quot;
+                }
+            ]
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1--id--questions--pivot_id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1--id--questions--pivot_id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1--id--questions--pivot_id-"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1--id--questions--pivot_id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1--id--questions--pivot_id-"></code></pre>
+</span>
+<form id="form-GETapi-v1--id--questions--pivot_id-" data-method="GET"
+      data-path="api/v1/{id}/questions/{pivot_id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","Authorization":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTgxMzYwYzUxMmViNTNhMDBkZDEyNGI2NzQwMjg0NDY4NzBkZTUyNWVkMDhiOGE0YjhhN2NhZGQ3MjVkYzQyZThmNzMwZDEzMjEwZDE2OWYiLCJpYXQiOjE2MzYzNjYyNDguMjM4OTUyLCJuYmYiOjE2MzYzNjYyNDguMjM4OTU1LCJleHAiOjE2Njc5MDIyNDguMjIxMDQyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.JOPUHZSws9mDsAvw3AVDeNHWtKGcGsOKpk1raZM4fkm02n4wD2yBfcUL2ZjbNmWUDwiuILu9AVph59Z0xNO2qlgZ6Ob2pzgLja_J7wM3FALzrxwtqHYTSwIzUdVBDkhWoZBYoaEmWUR2t5lqqlIehjQ5HwpuaS1qRhWAObyZqb6x4Z3efk5sS0BjLapVcAObqXya2YXYoUjLybvIsRugwTq2jysDnj-BBBbqWM03MTW7Vv7b6xd5IIuobj3P2SuQJyK33tqXt3ArK-FI5BNCfW0xCJLDupjFYOfZ98t36qDUUSMrz_exfdogYZpCBicKY7J9oYu59dCj8imitaIxC5SOm9PabDOJaNtQan_kKZf5LP7c_tjanDxx0l1eXLqn1JO44Y0BATzJ6aTwWG_MYgyCr5ym6uFENHJJfKBHqG0i-wBIskZjHeHg-PJqdDkmQS5FfwG8d7d23_SjhVziz7aiOkOLEVBOEFGdkKUltuhS_iPwCcFOU-cGTJLQYfWnQZMJg3t_5zKntty5A4XY93CCZO6kg8H-6KPRW2Ki6xxHm800Y0keJsKgGaywfx-DUYMaEHMmp4-sMIHkvZf5EeDRfxVU0EkgLqLn6aKRwJut0_YE32W8QTnTVgkzF3aFgYB8RZg56TfCtkwgjhu0IaZ4c_BE2Tp46AEU4jeijdA"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1--id--questions--pivot_id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1--id--questions--pivot_id-"
+                    onclick="tryItOut('GETapi-v1--id--questions--pivot_id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1--id--questions--pivot_id-"
+                    onclick="cancelTryOut('GETapi-v1--id--questions--pivot_id-');" hidden>Cancel
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1--id--questions--pivot_id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/{id}/questions/{pivot_id}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="GETapi-v1--id--questions--pivot_id-"
+               value="1"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the survey.</p>
+            </p>
+                    <p>
+                <b><code>pivot_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="pivot_id"
+               data-endpoint="GETapi-v1--id--questions--pivot_id-"
+               value="1"
+               data-component="url" hidden>
+    <br>
+<p>The Pivot Id.</p>
+            </p>
+                    </form>
+
+            <h2 id="endpoints-POSTapi-v1-answer">POST api/v1/answer</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-v1-answer">
+<blockquote>Example request:</blockquote>
+
+
+<pre><code class="language-bash">curl --request POST \
+    "http://localhost:8001/api/v1/answer" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre>
+
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8001/api/v1/answer"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+</span>
+
+<span id="example-responses-POSTapi-v1-answer">
+</span>
+<span id="execution-results-POSTapi-v1-answer" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-v1-answer"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-v1-answer"></code></pre>
+</span>
+<span id="execution-error-POSTapi-v1-answer" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-v1-answer"></code></pre>
+</span>
+<form id="form-POSTapi-v1-answer" data-method="POST"
+      data-path="api/v1/answer"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-v1-answer', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-v1-answer"
+                    onclick="tryItOut('POSTapi-v1-answer');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-v1-answer"
+                    onclick="cancelTryOut('POSTapi-v1-answer');" hidden>Cancel
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-v1-answer" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/v1/answer</code></b>
+        </p>
+                    </form>
+
+    
+
+        
+    </div>
+    <div class="dark-box">
+                    <div class="lang-selector">
+                                    <a href="#" data-language-name="bash">bash</a>
+                                    <a href="#" data-language-name="javascript">javascript</a>
+                            </div>
+            </div>
+</div>
+<script>
+    $(function () {
+        var exampleLanguages = ["bash","javascript"];
+        setupLanguages(exampleLanguages);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<?php
+
+namespace App\Models\Qualification;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class qualification extends Model
+{
+    use HasFactory;
+    protected $fillable=['qualification'];
+}
